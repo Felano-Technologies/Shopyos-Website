@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sell on Shopyos - Grow Your Local Business</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#84cc16",
+                        "secondary": "#1e3a8a",
+                        "surface-container": "#ebeef0",
+                        "outline-variant": "#c3c6d5",
+                        "surface": "#f7fafc",
+                        "background": "#f7fafc",
+                        "on-surface": "#1e293b",
+                        "on-surface-variant": "#475569"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-header { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .brand-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #111827 100%); }
+        .cta-gradient { background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%); }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 glass-header shadow-sm border-b border-outline-variant/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+            <div class="flex items-center">
+                <a href="index.html">
+                    <img alt="Shopyos Logo" class="h-8 md:h-10 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ug7TrcmcROX8Bh36G8XTLoAr1BqvqW4JzQZHMxhNIVPdnqkX48DgQIHJ8frbxEnZm3gjngePdAVb_Fw1Os-VatM44w-fO9WLjfhK2nslxFRp2u_sqCXTtYQADffd-0IW66rnDKkIpWtn24MaOWbHntlxiVWTXtZxsQ_xFUvF_460NuKDUIOoTss51cIRdF12xDlfHdvqMu1-wOTtTksDxkKDy7cqYRs_s38BLBIicHpOoECz1w42Zc0riByQXDg9PmAGx6ZRp3KF1U"/>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="text-on-surface-variant hover:text-secondary transition-colors font-headline tracking-tight font-semibold" href="index.html">Main Features</a>
+                <a class="text-secondary font-bold border-b-2 border-primary font-headline tracking-tight" href="sellers.html">For Sellers</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors font-headline tracking-tight font-semibold" href="drivers.html">For Drivers</a>
+            </div>
+            <button class="cta-gradient text-white px-6 py-2.5 rounded-lg font-bold hover:opacity-90 active:scale-95 transition-all shadow-md trigger-modal" data-role="Seller">
+                Register Store
+            </button>
+        </div>
+    </nav>
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden px-6 py-16 md:py-32">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-secondary text-xs font-bold tracking-widest uppercase">
+                        <span class="material-symbols-outlined text-sm">storefront</span> Modern Selling
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-headline font-extrabold text-secondary tracking-tighter leading-[1.1]">
+                        The Ultimate <span class="text-primary">Seller Experience</span>
+                    </h1>
+                    <p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        Scale your local business with Shopyos. Reach thousands of nearby customers, automate your delivery, and get paid instantly.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <button class="cta-gradient text-white px-8 py-4 rounded-lg text-lg font-bold shadow-xl hover:shadow-2xl transition-all active:scale-95 trigger-modal" data-role="Seller">
+                            Apply to Sell
+                        </button>
+                        <button class="flex items-center justify-center gap-3 px-8 py-4 rounded-lg text-lg font-semibold text-secondary hover:bg-secondary/5 transition-colors">
+                            View Fee Structure
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="relative z-10 p-4 bg-white/50 rounded-[2.5rem] backdrop-blur-md border border-white/20 shadow-2xl overflow-hidden aspect-video flex items-center justify-center">
+                        <img alt="Seller Dashboard Preview" class="rounded-[2rem] w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXxXdSJrpONijBSJv2p-Y6SbcPHDQSJATVZcrTP-ir2qn-9u3f5ZsIkwmmaSBbPk1zvvxpfD-4Kl8c0wF8BZZfFMppgHLRajg0ZmF9XqqUsYlkCnk8GQPS8XXvvjqGr85adikpxdYFklyadMkZ-iyNY4ZbqxGO_zWaDdcQHLh3Pk68cAhE9uX9juSxzncI5eYq4_QPBxzmb-fRkjxoBuBW-r9sRJtZQuF0VR46lZKx7OwuPcYjgyWpI4QXHRESyifJMBGK0hBtfRXr"/>
+                    </div>
+                    <div class="absolute -top-10 -right-10 w-48 h-48 bg-primary/20 rounded-full blur-3xl -z-10"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perks Section -->
+        <section class="py-24 bg-surface-container-low">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-4xl font-headline font-bold text-secondary mb-4">Why Partner with Shopyos?</h2>
+                    <p class="text-on-surface-variant text-lg">We provide the tools, you provide the talent. Together, we redefine local trade.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border-b-4 border-primary/20 hover:border-primary transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">payments</span>
+                        </div>
+                        <h3 class="text-xl font-headline font-bold text-secondary mb-3">Instant Cash-out</h3>
+                        <p class="text-on-surface-variant">No more waiting weeks for your money. Withdraw earnings as soon as your customer receives their order.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border-b-4 border-secondary/20 hover:border-secondary transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">analytics</span>
+                        </div>
+                        <h3 class="text-xl font-headline font-bold text-secondary mb-3">Seller Analytics</h3>
+                        <p class="text-on-surface-variant">Understand what's selling and why. Access professional-grade data to optimize your inventory and prices.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border-b-4 border-primary/20 hover:border-primary transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">local_shipping</span>
+                        </div>
+                        <h3 class="text-xl font-headline font-bold text-secondary mb-3">Auto-Logistics</h3>
+                        <p class="text-on-surface-variant">Focus on your craft. Shopyos automatically dispatches the nearest driver to handle your deliveries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- roadmap section -->
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="brand-gradient rounded-3xl p-12 md:p-20 text-center text-white relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, #84cc16 1px, transparent 0); background-size: 40px 40px;"></div>
+                    <div class="relative z-10 max-w-3xl mx-auto">
+                        <h2 class="text-4xl md:text-5xl font-headline font-extrabold mb-8 tracking-tight">The Path to <span class="text-primary">Launch</span></h2>
+                        <div class="space-y-12">
+                            <div class="flex gap-6 items-start text-left">
+                                <div class="w-10 h-10 rounded-full bg-primary flex-shrink-0 flex items-center justify-center text-secondary font-bold">1</div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-primary">Pre-registration (Now)</h4>
+                                    <p class="text-slate-300">Sign up now to lock in 0% commission fees for your first 3 months on Shopyos.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 items-start text-left">
+                                <div class="w-10 h-10 rounded-full bg-white/20 flex-shrink-0 flex items-center justify-center text-white font-bold border border-white/40">2</div>
+                                <div>
+                                    <h4 class="text-xl font-bold">Store Verification (Q3 2024)</h4>
+                                    <p class="text-slate-300">Our team will reach out to verify your inventory and prepare your store for the grand opening.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 items-start text-left">
+                                <div class="w-10 h-10 rounded-full bg-white/20 flex-shrink-0 flex items-center justify-center text-white font-bold border border-white/40">3</div>
+                                <div>
+                                    <h4 class="text-xl font-bold">Go Live (Q4 2024)</h4>
+                                    <p class="text-slate-300">Start selling to thousands of local customers with the full power of Shopyos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-16">
+                            <button class="cta-gradient text-white px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 transition-transform trigger-modal" data-role="Seller">
+                                Join the Seller Waitlist
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-24 bg-surface">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-3xl font-headline font-bold text-secondary mb-12 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30">
+                        <h5 class="font-bold text-secondary text-lg mb-2">How much are the commission fees?</h5>
+                        <p class="text-on-surface-variant">Our standard fee is 5% per order. However, early-bird sellers who sign up today enjoy 0% commission for the first 3 months.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30">
+                        <h5 class="font-bold text-secondary text-lg mb-2">What can I sell?</h5>
+                        <p class="text-on-surface-variant">Anything from groceries, fashion, electronics, to handmade goods. If it's legal and can be delivered locally, it's welcome!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-secondary text-white w-full py-16">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="space-y-6">
+                <img alt="Shopyos Logo" class="h-12 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uh7Vw_lkHpCNGIf5m1o7pSUlevV3r1o9J-3m2dAYNhUDUnEDZVT-BTSbw5CNsgqdUEbvkAPVtcNLbarIWpNlke8OLGNjoenTNWvD47ASFhz3qjeXK1dHbbc43LMJ9DdYXLrlTzNdZ_92a2ynn57g5DF7pDRy2xk0gwy-PItqKVIVBCjPw1vjAyujAHRoLZKD1PRuWS3SlGBjJcJdBGn3rHoSUiUCWhXjKV4rrm3eItcKM5DsL0_KEeRyYD2RwAEQj0Dad3GgEms5Vk"/>
+                <p class="text-slate-300 max-w-sm font-inter text-sm leading-relaxed">
+                    Reimagining the local marketplace with security, speed, and community at its heart.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-primary hover:bg-primary hover:text-secondary transition-all" href="#"><span class="material-symbols-outlined text-xl">share</span></a>
+                    <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-primary hover:bg-primary hover:text-secondary transition-all" href="#"><span class="material-symbols-outlined text-xl">public</span></a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <h6 class="font-bold text-primary">Legal</h6>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h6 class="font-bold text-primary">Company</h6>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><a class="hover:text-primary transition-colors" href="index.html">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="drivers.html">For Drivers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 text-xs text-slate-400">
+            © 2024 Shopyos Marketplace. All rights reserved.
+        </div>
+    </footer>
+
+<!-- Waitlist Modal -->
+<div id="waitlist-modal" class="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-secondary/40 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+    <div class="bg-white rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300" id="modal-content">
+        <div class="brand-gradient p-8 text-white relative">
+            <button class="absolute top-4 right-4 text-white/60 hover:text-white transition-colors" onclick="closeModal()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <h2 class="text-3xl font-headline font-extrabold mb-2">Join the Future</h2>
+            <p class="text-slate-300">Be the first to know when we launch in Q4 2024.</p>
+        </div>
+        <div class="p-8">
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLScvBpP_2HaxtYCRYsbK-o4X_4LTWd5M9QyGH3YtBbkOSSHDqQ/formResponse" id="waitlist-form" method="POST" onsubmit="handleFormSubmit(this)" target="hidden_iframe">
+                <div class="space-y-4" id="form-body">
+                    <div>
+                        <label class="block text-sm font-bold text-secondary mb-1" for="email">Email Address</label>
+                        <input class="w-full px-4 py-3 rounded-xl border border-outline-variant/50 focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" id="email" name="entry.814198919" placeholder="felly@example.com" required="" type="email"/>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-secondary mb-1" for="role-select">I am a...</label>
+                        <select class="w-full px-4 py-3 rounded-xl border border-outline-variant/50 focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none bg-white" id="role-select" name="entry.884317362" required="">
+                            <option value="Buyer/Customer">Buyer / Customer</option>
+                            <option value="Seller?Merchant">Seller / Merchant</option>
+                            <option value="Delivery Partner">Delivery Partner</option>
+                        </select>
+                    </div>
+                    <button class="w-full cta-gradient text-white py-4 rounded-xl font-bold shadow-lg hover:shadow-xl hover:opacity-90 transition-all flex items-center justify-center gap-2" id="submit-btn" type="submit">
+                        <span id="btn-text">Join Waitlist</span>
+                        <div class="hidden w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" id="btn-loader"></div>
+                    </button>
+                </div>
+            </form>
+            <div class="hidden text-center space-y-4" id="success-message">
+                <div class="w-16 h-16 bg-primary/20 text-primary rounded-full flex items-center justify-center mx-auto">
+                    <span class="material-symbols-outlined text-4xl">check_circle</span>
+                </div>
+                <h3 class="text-2xl font-headline font-bold text-secondary">You're on the list!</h3>
+                <p class="text-on-surface-variant">Thank you for your interest. We'll send an update to your email soon.</p>
+                <button class="text-primary font-bold hover:underline" onclick="closeModal()">Return to site</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<iframe id="hidden_iframe" name="hidden_iframe" style="display:none;"></iframe>
+
+<script>
+    let submitted = false;
+
+    function openModal(role = 'Seller') {
+        const modal = document.getElementById('waitlist-modal');
+        const content = document.getElementById('modal-content');
+        const roleSelect = document.getElementById('role-select');
+        
+        if(roleSelect) roleSelect.value = role;
+
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            content.classList.remove('scale-95');
+        }, 10);
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('waitlist-modal');
+        const content = document.getElementById('modal-content');
+        
+        modal.classList.add('opacity-0');
+        content.classList.add('scale-95');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            // Reset form
+            document.getElementById('waitlist-form').classList.remove('hidden');
+            document.getElementById('form-body').classList.remove('hidden');
+            document.getElementById('success-message').classList.add('hidden');
+            document.getElementById('submit-btn').disabled = false;
+            document.getElementById('btn-text').classList.remove('hidden');
+            document.getElementById('btn-loader').classList.add('hidden');
+            document.getElementById('waitlist-form').reset();
+        }, 300);
+    }
+
+    function handleFormSubmit(form) {
+        submitted = true;
+        document.getElementById('submit-btn').disabled = true;
+        document.getElementById('btn-text').classList.add('hidden');
+        document.getElementById('btn-loader').classList.remove('hidden');
+        
+        // The iframe will handle the actual submission
+        setTimeout(() => {
+            document.getElementById('form-body').classList.add('hidden');
+            document.getElementById('success-message').classList.remove('hidden');
+        }, 1500);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const triggers = document.querySelectorAll('.trigger-modal');
+        triggers.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const role = btn.getAttribute('data-role') || 'Seller';
+                openModal(role);
+            });
+        });
+
+        document.getElementById('waitlist-modal').addEventListener('click', (e) => {
+            if(e.target === document.getElementById('waitlist-modal')) {
+                closeModal();
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Shopyos - The Future of Local Commerce</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#84cc16", // Lime Green
+                        "secondary": "#1e3a8a", // Deep Blue
+                        "surface-container": "#ebeef0",
+                        "outline-variant": "#c3c6d5",
+                        "inverse-on-surface": "#eef1f3",
+                        "primary-fixed-dim": "#bef264",
+                        "tertiary-container": "#064e3b",
+                        "on-tertiary-container": "#bef264",
+                        "surface": "#f7fafc",
+                        "surface-tint": "#1e3a8a",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f1f4f6",
+                        "on-primary": "#000000",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1e293b",
+                        "on-surface": "#1e293b",
+                        "on-surface-variant": "#475569",
+                        "background": "#f7fafc",
+                        "outline": "#94a3b8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-header {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .brand-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #111827 100%);
+        }
+
+        .cta-gradient {
+            background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%);
+        }
+
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 glass-header shadow-sm border-b border-outline-variant/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+            <div class="flex items-center">
+                <a href="index.html">
+                    <img alt="Shopyos Logo" class="h-8 md:h-10 object-contain"
+                        src="https://lh3.googleusercontent.com/aida/ADBb0ug7TrcmcROX8Bh36G8XTLoAr1BqvqW4JzQZHMxhNIVPdnqkX48DgQIHJ8frbxEnZm3gjngePdAVb_Fw1Os-VatM44w-fO9WLjfhK2nslxFRp2u_sqCXTtYQADffd-0IW66rnDKkIpWtn24MaOWbHntlxiVWTXtZxsQ_xFUvF_460NuKDUIOoTss51cIRdF12xDlfHdvqMu1-wOTtTksDxkKDy7cqYRs_s38BLBIicHpOoECz1w42Zc0riByQXDg9PmAGx6ZRp3KF1U" />
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="text-secondary font-bold border-b-2 border-primary font-headline tracking-tight"
+                    href="#">Features</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors font-headline tracking-tight font-semibold"
+                    href="sellers.html">For Sellers</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors font-headline tracking-tight font-semibold"
+                    href="drivers.html">For Drivers</a>
+            </div>
+            <button
+                class="cta-gradient text-white px-6 py-2.5 rounded-lg font-bold hover:opacity-90 active:scale-95 transition-all shadow-md trigger-modal"
+                data-role="Buyer">
+                Get Notified
+            </button>
+        </div>
+    </nav>
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden px-6 py-16 md:py-24">
+            <div class="max-w-7xl mx-auto editorial-grid gap-8 items-center">
+                <div class="col-span-12 md:col-span-7 space-y-8">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-secondary text-xs font-bold tracking-widest uppercase">
+                        <img alt="Shopyos Icon" class="w-4 h-4"
+                            src="https://lh3.googleusercontent.com/aida/ADBb0uiz8Ioi6JXUYUs4uXCW8n6U8JjYBtCk0NKMLwViVKq9Ur6ujhvPd9ZtlzD2HOAZGJ2b5gri-f2mVhiVyAmArfHr8o9SgdODjbEaqeSXV0vZwZx1mqoKq4s-x9q6xngZGK43kMuXsuny6voe9kp3S6NuO0lFQg6FsJ_UWiKdof9ImEhnKBoomcSGKV4H4G0ovo9wdA3NyFsa99FFbN2wmIx5A1gNmH87lCXjBJgWw8hUU47J9lJLD0Yr24SSL0w6oUCYotvucfaUkQ" />
+                        Coming Soon to Google Play
+                    </div>
+                    <h1
+                        class="text-5xl md:text-7xl font-headline font-extrabold text-secondary tracking-tighter leading-[1.1]">
+                        The Future of <span class="text-primary">Local Commerce</span> is Shopyos
+                    </h1>
+                    <p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        A seamless marketplace for buyers, sellers, and drivers. Experience hyper-local trade with
+                        atomic security and real-time tracking.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <button
+                            class="cta-gradient text-white px-8 py-4 rounded-lg text-lg font-bold shadow-xl hover:shadow-2xl transition-all active:scale-95 trigger-modal"
+                            data-role="Buyer">
+                            Pre-register Now
+                        </button>
+                        <button
+                            class="flex items-center justify-center gap-3 px-8 py-4 rounded-lg text-lg font-semibold text-secondary hover:bg-secondary/5 transition-colors">
+                            <span class="material-symbols-outlined">play_circle</span>
+                            See how it works
+                        </button>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-5 relative mt-12 md:mt-0">
+                    <div
+                        class="relative z-10 p-4 bg-white/50 rounded-[2.5rem] backdrop-blur-md border border-white/20 shadow-2xl">
+                        <img alt="Mobile App Interface" class="rounded-[2rem]"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxIZn7vgKDNpm9qHZJsNhysso9UP-tZCsOhaaEB-1Pltxg3O12oLve5zK-npWIymGHxhDP7vFOQ2lKiVIFW03OJ30WXLa1CTjwJKsShCwZOiUmd-YSwrIEW-TgXUGjZmNaPtY0HqlcoZ7JjBbyvFWMB3t_riDvq-MEgRnnPIKoRssAR9af9DYsU08TPjoC4wFVqhE4nr3mPI3er2hV3aUF2hgOaNDRBWOl4hZ_Pa_-jUGnlXo1h6Ln8jhXvGOT4XS7vpg-XiE9wfa5" />
+                    </div>
+                    <!-- Decorative Background Shapes -->
+                    <div class="absolute -top-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+                    <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-secondary/10 rounded-full blur-3xl -z-10">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Value Proposition: Bento Grid -->
+        <section class="py-24 bg-surface-container-low">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-16 text-center max-w-2xl mx-auto">
+                    <h2 class="text-4xl font-headline font-bold mb-4 text-secondary">Empowering the Entire Ecosystem
+                    </h2>
+                    <p class="text-on-surface-variant">Built for the modern economy, Shopyos connects everyone with
+                        purpose-driven tools.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Buyers -->
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow group border-b-4 border-primary/20 hover:border-primary">
+                        <div
+                            class="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">shopping_bag</span>
+                        </div>
+                        <h3 class="text-2xl font-headline font-bold mb-3 text-secondary">Buyers</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Instant discovery of local gems with
+                            military-grade order security and real-time tracking.</p>
+                        <ul class="mt-6 space-y-3">
+                            <li class="flex items-center gap-2 text-sm font-medium text-on-surface">
+                                <span class="material-symbols-outlined text-primary text-lg"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                One-tap checkout
+                            </li>
+                            <li class="flex items-center gap-2 text-sm font-medium text-on-surface">
+                                <span class="material-symbols-outlined text-primary text-lg"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Live courier tracking
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Sellers -->
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow group border-b-4 border-secondary/20 hover:border-secondary">
+                        <div
+                            class="w-14 h-14 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">storefront</span>
+                        </div>
+                        <h3 class="text-2xl font-headline font-bold mb-3 text-secondary">Sellers</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Scalable store management with advanced
+                            analytics and instant payout settlement infrastructure.</p>
+                        <ul class="mt-6 space-y-3">
+                            <li class="flex items-center gap-2 text-sm font-medium text-on-surface">
+                                <span class="material-symbols-outlined text-primary text-lg"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Inventory automation
+                            </li>
+                            <li class="flex items-center gap-2 text-sm font-medium text-on-surface">
+                                <span class="material-symbols-outlined text-primary text-lg"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Integrated logistics
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Drivers -->
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow group border-b-4 border-primary/20 hover:border-primary">
+                        <div
+                            class="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">delivery_dining</span>
+                        </div>
+                        <h3 class="text-2xl font-headline font-bold mb-3 text-secondary">Drivers</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Flexible earning opportunities with
+                            intelligent route optimization and instant gig alerts.</p>
+                        <ul class="mt-6 space-y-3">
+                            <li class="flex items-center gap-2 text-sm font-medium text-on-surface">
+                                <span class="material-symbols-outlined text-primary text-lg"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Transparent earnings
+                            </li>
+                            <li class="flex items-center gap-2 text-sm font-medium text-on-surface">
+                                <span class="material-symbols-outlined text-primary text-lg"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                24/7 Driver support
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Key Features Section -->
+        <section class="py-24 bg-surface">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-16">
+                    <div class="w-full md:w-1/2">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-4 pt-12">
+                                <div
+                                    class="bg-surface-container-highest h-64 rounded-xl overflow-hidden shadow-lg border border-outline-variant/30">
+                                    <img alt="Security Visualization" class="w-full h-full object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAipjAqTUziNfdp3cBwux7sFE45rEkqcOQYVN8QQ8UwKuHh9F3lFBk5qBqirKxzVN7v8olqZN0Ug1WX1aB0L4fjlQWIOX80e0sGAf-fvDt_acdqoEg5dUC2z_kKLbrJhxbGt05GRakXB018RiFiY0RIMAQaz2tsblQq_VuL7hyMTrszoB7491hsXjjCPva0SMptadm-LtcggPdYBs0R7f7M8MFxrao5q1PBsqc8RwVoj6zyOAxSGA0_zyuYggf6VfYysiWGsGy45S8r" />
+                                </div>
+                                <div class="bg-secondary p-6 rounded-xl text-white">
+                                    <img alt="Security Icon" class="w-10 h-10 mb-4"
+                                        src="https://lh3.googleusercontent.com/aida/ADBb0ugrGrTpsTEN0tNGWZB8eZUeODYxxZXkznDECd3M4-_m7RY4q2cFY6rl2U03WyllypBAw3wUOQhp0OwfhvyYyldEo14G5iQwH-JAK6MO1O6T4it__VdbZQ3K8YllloOGctwGiZo97WJRPM6Yv_10vHKK_Z39Nm_0wG8wwXG_PryLDvGuDeR_y6wQOzuwiGplkvls5nHI5HxWfEx7BNm7ELDyXsFK74K5o-hzgINZ8jmUIm2b7Ok6OguNQEkIjoZSfzE6i8XR9SKjliE" />
+                                    <h4 class="text-xl font-bold font-headline text-primary">Atomic Security</h4>
+                                    <p class="text-slate-300 text-sm mt-2">Every transaction is protected by our
+                                        proprietary multi-layer verification system.</p>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="bg-primary p-6 rounded-xl text-secondary">
+                                    <span class="material-symbols-outlined text-4xl mb-4"
+                                        style="font-variation-settings: 'FILL' 1;">location_on</span>
+                                    <h4 class="text-xl font-bold font-headline">GPS Tracking</h4>
+                                    <p class="text-secondary/80 text-sm mt-2 font-medium">Precision real-time location
+                                        updates from warehouse to doorstep.</p>
+                                </div>
+                                <div
+                                    class="bg-surface-container-highest h-80 rounded-xl overflow-hidden shadow-lg border border-outline-variant/30">
+                                    <img alt="Delivery Tracking" class="w-full h-full object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXxXdSJrpONijBSJv2p-Y6SbcPHDQSJATVZcrTP-ir2qn-9u3f5ZsIkwmmaSBbPk1zvvxpfD-4Kl8c0wF8BZZfFMppgHLRajg0ZmF9XqqUsYlkCnk8GQPS8XXvvjqGr85adikpxdYFklyadMkZ-iyNY4ZbqxGO_zWaDdcQHLh3Pk68cAhE9uX9juSxzncI5eYq4_QPBxzmb-fRkjxoBuBW-r9sRJtZQuF0VR46lZKx7OwuPcYjgyWpI4QXHRESyifJMBGK0hBtfRXr" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 space-y-8">
+                        <div class="label-md uppercase tracking-widest text-primary font-bold">Unmatched Reliability
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-headline font-extrabold leading-tight text-secondary">
+                            Technology that puts trust first.</h2>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-secondary">verified</span>
+                                </div>
+                                <div>
+                                    <h5 class="text-lg font-bold text-secondary">Verified Vendors Only</h5>
+                                    <p class="text-on-surface-variant">Our admin moderation team meticulously vets every
+                                        merchant before they go live on the platform.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-secondary">shield</span>
+                                </div>
+                                <div>
+                                    <h5 class="text-lg font-bold text-secondary">Escrow Protection</h5>
+                                    <p class="text-on-surface-variant">Funds are held securely until the buyer confirms
+                                        the order meets quality standards.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-secondary">support_agent</span>
+                                </div>
+                                <div>
+                                    <h5 class="text-lg font-bold text-secondary">24/7 Human Moderation</h5>
+                                    <p class="text-on-surface-variant">Real people are always available to resolve
+                                        disputes and maintain marketplace integrity.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Coming Soon Banner -->
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div
+                    class="brand-gradient rounded-3xl p-12 md:p-20 relative overflow-hidden flex flex-col items-center text-center">
+                    <!-- Background texture -->
+                    <div class="absolute inset-0 opacity-10 pointer-events-none"
+                        style="background-image: radial-gradient(circle at 2px 2px, #84cc16 1px, transparent 0); background-size: 40px 40px;">
+                    </div>
+                    <div class="relative z-10 max-w-3xl space-y-8">
+                        <div
+                            class="inline-block px-4 py-1.5 rounded-full bg-primary text-secondary text-sm font-bold tracking-widest uppercase mb-4">
+                            The Launch Countdown
+                        </div>
+                        <h2 class="text-4xl md:text-6xl font-headline font-extrabold text-white tracking-tighter">
+                            Be the first to trade on <span class="text-primary">Shopyos.</span>
+                        </h2>
+                        <p class="text-xl text-slate-300">
+                            Join over 5,000+ people waiting for the most advanced marketplace experience ever created.
+                        </p>
+                        <div class="mt-12 flex flex-col items-center gap-8">
+                            <button
+                                class="cta-gradient text-white px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 transition-transform trigger-modal"
+                                data-role="Buyer">
+                                Join the Waitlist
+                            </button>
+                            <div class="flex flex-col md:flex-row items-center gap-6 opacity-90">
+                                <div
+                                    class="flex items-center gap-3 bg-black text-white px-6 py-3 rounded-xl border border-white/20">
+                                    <img alt="Google Play Coming Soon" class="h-10"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3WjwgcuYUVtLaWfFfEXm_UMfBkEDzQzV53FmLoWP5p3Y4Y8vKf9PtsCr6HKIzOqNjSKlBG7zjIjdAy4VQWD2a_tY9gq2pNIeONH4vOq7KKzSVZ_EvOeZ8VXuiXUuKEDBCAKD1HoheLP3KejysCwPoedgh0MEp8i8e2-Z3uBwyYcRWdLzeO6_vRE4vQcQ73ZEL2OvtvEstYDwX0_mw5xXP50_fYfZk8rBmtczYINIzFwETolLxYPhM1KS1YRietC2v11FZT6jzek2E" />
+                                </div>
+                                <div class="text-primary text-sm font-bold tracking-wider">Coming Q4 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-secondary text-white w-full py-16">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="space-y-6">
+                <img alt="Shopyos Logo" class="h-12 object-contain"
+                    src="https://lh3.googleusercontent.com/aida/ADBb0uh7Vw_lkHpCNGIf5m1o7pSUlevV3r1o9J-3m2dAYNhUDUnEDZVT-BTSbw5CNsgqdUEbvkAPVtcNLbarIWpNlke8OLGNjoenTNWvD47ASFhz3qjeXK1dHbbc43LMJ9DdYXLrlTzNdZ_92a2ynn57g5DF7pDRy2xk0gwy-PItqKVIVBCjPw1vjAyujAHRoLZKD1PRuWS3SlGBjJcJdBGn3rHoSUiUCWhXjKV4rrm3eItcKM5DsL0_KEeRyYD2RwAEQj0Dad3GgEms5Vk" />
+                <p class="text-slate-300 max-w-sm font-inter text-sm leading-relaxed">
+                    Reimagining the local marketplace with security, speed, and community at its heart.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-primary hover:bg-primary hover:text-secondary transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined text-xl">share</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-primary hover:bg-primary hover:text-secondary transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined text-xl">public</span>
+                    </a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <h6 class="font-bold text-primary">Legal</h6>
+                    <ul class="space-y-2 font-inter text-sm text-slate-300">
+                        <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h6 class="font-bold text-primary">Company</h6>
+                    <ul class="space-y-2 font-inter text-sm text-slate-300">
+                        <li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Press Kit</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 gap-4">
+            <span>© 2024 Shopyos Marketplace. All rights reserved.</span>
+            <div class="flex gap-6">
+                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">language</span>
+                    English (US)</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Waitlist Modal -->
+    <div id="waitlist-modal"
+        class="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-secondary/40 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300"
+            id="modal-content">
+            <div class="brand-gradient p-8 text-white relative">
+                <button class="absolute top-4 right-4 text-white/60 hover:text-white transition-colors"
+                    onclick="closeModal()">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+                <h2 class="text-3xl font-headline font-extrabold mb-2">Join the Future</h2>
+                <p class="text-slate-300">Be the first to know when we launch in Q4 2024.</p>
+            </div>
+            <div class="p-8">
+                <form
+                    action="https://docs.google.com/forms/d/e/1FAIpQLScvBpP_2HaxtYCRYsbK-o4X_4LTWd5M9QyGH3YtBbkOSSHDqQ/formResponse"
+                    id="waitlist-form" method="POST" onsubmit="handleFormSubmit(this)" target="hidden_iframe">
+                    <div class="space-y-4" id="form-body">
+                        <div>
+                            <label class="block text-sm font-bold text-secondary mb-1" for="email">Email Address</label>
+                            <input
+                                class="w-full px-4 py-3 rounded-xl border border-outline-variant/50 focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none"
+                                id="email" name="entry.814198919" placeholder="felly@example.com" required=""
+                                type="email" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-secondary mb-1" for="role-select">I am
+                                a...</label>
+                            <select
+                                class="w-full px-4 py-3 rounded-xl border border-outline-variant/50 focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none bg-white"
+                                id="role-select" name="entry.884317362" required="">
+                                <option value="Buyer/Customer">Buyer / Customer</option>
+                                <option value="Seller?Merchant">Seller / Merchant</option>
+                                <option value="Delivery Partner">Delivery Partner</option>
+                            </select>
+                        </div>
+                        <button
+                            class="w-full cta-gradient text-white py-4 rounded-xl font-bold shadow-lg hover:shadow-xl hover:opacity-90 transition-all flex items-center justify-center gap-2"
+                            id="submit-btn" type="submit">
+                            <span id="btn-text">Join Waitlist</span>
+                            <div class="hidden w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"
+                                id="btn-loader"></div>
+                        </button>
+                    </div>
+                </form>
+                <div class="hidden text-center space-y-4" id="success-message">
+                    <div
+                        class="w-16 h-16 bg-primary/20 text-primary rounded-full flex items-center justify-center mx-auto">
+                        <span class="material-symbols-outlined text-4xl">check_circle</span>
+                    </div>
+                    <h3 class="text-2xl font-headline font-bold text-secondary">You're on the list!</h3>
+                    <p class="text-on-surface-variant">Thank you for your interest. We'll send an update to your email
+                        soon.</p>
+                    <button class="text-primary font-bold hover:underline" onclick="closeModal()">Return to
+                        site</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;"></iframe>
+
+    <script>
+        let submitted = false;
+
+        function openModal(role = 'Buyer') {
+            const modal = document.getElementById('waitlist-modal');
+            const content = document.getElementById('modal-content');
+            const roleSelect = document.getElementById('role-select');
+
+            if (roleSelect) roleSelect.value = role;
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                content.classList.remove('scale-95');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('waitlist-modal');
+            const content = document.getElementById('modal-content');
+
+            modal.classList.add('opacity-0');
+            content.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                // Reset form
+                document.getElementById('waitlist-form').classList.remove('hidden');
+                document.getElementById('form-body').classList.remove('hidden');
+                document.getElementById('success-message').classList.add('hidden');
+                document.getElementById('submit-btn').disabled = false;
+                document.getElementById('btn-text').classList.remove('hidden');
+                document.getElementById('btn-loader').classList.add('hidden');
+                document.getElementById('waitlist-form').reset();
+            }, 300);
+        }
+
+        function handleFormSubmit(form) {
+            submitted = true;
+            document.getElementById('submit-btn').disabled = true;
+            document.getElementById('btn-text').classList.add('hidden');
+            document.getElementById('btn-loader').classList.remove('hidden');
+
+            // The iframe will handle the actual submission
+            // We simulate a short delay for UX before showing success
+            setTimeout(() => {
+                document.getElementById('form-body').classList.add('hidden');
+                document.getElementById('success-message').classList.remove('hidden');
+            }, 1500);
+        }
+
+        // Attach listeners to all trigger buttons
+        document.addEventListener('DOMContentLoaded', () => {
+            const triggers = document.querySelectorAll('.trigger-modal');
+            triggers.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const role = btn.getAttribute('data-role') || 'Buyer';
+                    openModal(role);
+                });
+            });
+
+            // Close on backdrop click
+            document.getElementById('waitlist-modal').addEventListener('click', (e) => {
+                if (e.target === document.getElementById('waitlist-modal')) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
