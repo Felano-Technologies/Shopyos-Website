@@ -178,9 +178,64 @@
                     </div>
                 </section>
 
+                <hr class="border-outline-variant/30">
+
+                <!-- NEW: Data Retention Section required by Google Play -->
+                <section>
+                    <h2 class="text-2xl font-headline font-bold text-secondary mb-6 flex items-center gap-3">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-secondary text-sm">3</span>
+                        What Data Is Deleted & What Is Kept
+                    </h2>
+                    <div class="ml-11 space-y-6">
+                        <div class="bg-surface-container rounded-2xl border border-outline-variant/30 overflow-hidden">
+                            <!-- Deleted immediately -->
+                            <div class="p-6 border-b border-outline-variant/30">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <span class="material-symbols-outlined text-red-500">delete_forever</span>
+                                    <h4 class="font-bold text-secondary text-lg">Deleted Immediately</h4>
+                                </div>
+                                <ul class="space-y-2 text-on-surface-variant">
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-red-400 text-sm">close</span> Profile information (name, email, phone number)</li>
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-red-400 text-sm">close</span> Saved addresses and delivery locations</li>
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-red-400 text-sm">close</span> Payment methods and wallet information</li>
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-red-400 text-sm">close</span> Profile photos and uploaded images</li>
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-red-400 text-sm">close</span> Chat messages and communication history</li>
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-red-400 text-sm">close</span> Preferences and app settings</li>
+                                </ul>
+                            </div>
+                            <!-- Deleted within 90 days -->
+                            <div class="p-6 border-b border-outline-variant/30">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <span class="material-symbols-outlined text-amber-500">schedule</span>
+                                    <h4 class="font-bold text-secondary text-lg">Deleted Within 90 Days</h4>
+                                </div>
+                                <ul class="space-y-2 text-on-surface-variant">
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-amber-400 text-sm">schedule</span> Order history and transaction records</li>
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-amber-400 text-sm">schedule</span> Product listings (for Sellers)</li>
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-amber-400 text-sm">schedule</span> Delivery records (for Drivers)</li>
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-amber-400 text-sm">schedule</span> Reviews and ratings you have given or received</li>
+                                </ul>
+                            </div>
+                            <!-- Retained for legal reasons -->
+                            <div class="p-6">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <span class="material-symbols-outlined text-blue-500">gavel</span>
+                                    <h4 class="font-bold text-secondary text-lg">Retained for Legal Purposes</h4>
+                                </div>
+                                <p class="text-on-surface-variant mb-3">Some data may be retained beyond 90 days where required by law or for legitimate business purposes, including:</p>
+                                <ul class="space-y-2 text-on-surface-variant">
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-blue-400 text-sm">info</span> Financial transaction records (as required by tax and financial regulations)</li>
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-blue-400 text-sm">info</span> Fraud prevention and security logs</li>
+                                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-blue-400 text-sm">info</span> Dispute resolution records</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/20 italic">
                     <p class="text-on-surface-variant text-sm">
-                        Note: For security reasons, we may require you to verify your identity before processing an email deletion request. This process usually takes 3-5 business days.
+                        Note: For security reasons, we may require you to verify your identity before processing an email deletion request. This process usually takes 3-5 business days. Once deletion is confirmed, it cannot be reversed.
                     </p>
                 </section>
             </div>
@@ -235,7 +290,6 @@
         </div>
     </footer>
 
-    <!-- Waitlist Modal (copied for consistency) -->
     <div id="waitlist-modal"
         class="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-secondary/40 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
         <div class="bg-white rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300"
@@ -261,8 +315,7 @@
                                 type="email" />
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-secondary mb-1" for="role-select">I am
-                                a...</label>
+                            <label class="block text-sm font-bold text-secondary mb-1" for="role-select">I am a...</label>
                             <select
                                 class="w-full px-4 py-3 rounded-xl border border-outline-variant/50 focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none bg-white"
                                 id="role-select" name="entry.884317362" required="">
@@ -281,15 +334,12 @@
                     </div>
                 </form>
                 <div class="hidden text-center space-y-4" id="success-message">
-                    <div
-                        class="w-16 h-16 bg-primary/20 text-primary rounded-full flex items-center justify-center mx-auto">
+                    <div class="w-16 h-16 bg-primary/20 text-primary rounded-full flex items-center justify-center mx-auto">
                         <span class="material-symbols-outlined text-4xl">check_circle</span>
                     </div>
                     <h3 class="text-2xl font-headline font-bold text-secondary">You're on the list!</h3>
-                    <p class="text-on-surface-variant">Thank you for your interest. We'll send an update to your email
-                        soon.</p>
-                    <button class="text-primary font-bold hover:underline" onclick="closeModal()">Return to
-                        site</button>
+                    <p class="text-on-surface-variant">Thank you for your interest. We'll send an update to your email soon.</p>
+                    <button class="text-primary font-bold hover:underline" onclick="closeModal()">Return to site</button>
                 </div>
             </div>
         </div>
