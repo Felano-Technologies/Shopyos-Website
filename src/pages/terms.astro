@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const lastUpdated = 'July 19, 2026';
+const sections = [
+  {
+    title: '1. Acceptance of These Terms',
+    items: [
+      'By creating an account, accessing the website, using the Shopyos mobile application, or using any related service, you agree to these Terms of Service.',
+      'If you do not agree to these terms, you should not use Shopyos.',
+      'These terms apply to buyers, sellers, delivery partners, visitors, and anyone else who uses Shopyos.',
+    ],
+  },
+  {
+    title: '2. About Shopyos',
+    items: [
+      'Shopyos is a local commerce marketplace designed to connect buyers, sellers, and delivery partners.',
+      'Shopyos may provide tools for product discovery, ordering, seller management, delivery coordination, communication, payments, support, and related marketplace services.',
+      'Some features may still be in development, limited release, or available only in selected locations while the platform prepares for launch.',
+    ],
+  },
+  {
+    title: '3. Accounts and Eligibility',
+    items: [
+      'You must provide accurate, complete, and current information when creating or updating an account.',
+      'You are responsible for keeping your login details secure and for all activity that happens under your account.',
+      'You must notify us immediately if you believe your account has been accessed without permission.',
+      'Shopyos is not intended for children under 16. By using Shopyos, you confirm that you are at least 16 years old or have the permission of a parent or legal guardian where required.',
+    ],
+  },
+  {
+    title: '4. Buyer Responsibilities',
+    items: [
+      'Buyers are responsible for reviewing product details, prices, delivery information, seller terms, and order summaries before placing an order.',
+      'Buyers must provide accurate delivery information and be available for reasonable delivery communication.',
+      'Buyers must use Shopyos lawfully and must not place fraudulent, abusive, or misleading orders.',
+      'Where refunds, returns, cancellations, or disputes apply, they may be handled according to Shopyos policies, seller policies, payment-provider rules, and applicable law.',
+    ],
+  },
+  {
+    title: '5. Seller Responsibilities',
+    items: [
+      'Sellers are responsible for ensuring that product listings, prices, images, stock levels, business details, and fulfilment information are accurate and lawful.',
+      'Sellers must only list products they are legally permitted to sell.',
+      'Sellers must not misrepresent products, inflate reviews, abuse buyers, or use Shopyos for deceptive activity.',
+      'Sellers are responsible for fulfilling accepted orders, communicating clearly, and resolving order issues in good faith.',
+    ],
+  },
+  {
+    title: '6. Delivery Partner Responsibilities',
+    items: [
+      'Delivery partners must provide accurate account, vehicle, location, and availability information where required.',
+      'Delivery partners must handle orders responsibly and deliver items within reasonable timeframes where possible.',
+      'Delivery partners must comply with applicable road safety, transport, licensing, and local regulations.',
+      'Delivery partners must not misuse customer, seller, or order information obtained through Shopyos.',
+    ],
+  },
+  {
+    title: '7. Payments, Fees, and Payouts',
+    items: [
+      'Payments may be processed by trusted third-party payment providers. Shopyos does not store full card details on its servers.',
+      'Prices, delivery fees, service fees, commissions, promotions, refunds, and payouts may vary depending on the order, location, user role, seller settings, and platform policies.',
+      'Sellers and delivery partners are responsible for reviewing applicable fees, payout schedules, and tax obligations.',
+      'We may delay, withhold, or reverse payments where fraud, disputes, chargebacks, policy breaches, or legal requirements are involved.',
+    ],
+  },
+  {
+    title: '8. Prohibited Conduct',
+    items: [
+      'You must not use Shopyos for fraud, scams, illegal sales, harassment, abuse, money laundering, identity misuse, or unauthorised access.',
+      'You must not interfere with the security, performance, or normal operation of Shopyos.',
+      'You must not scrape, copy, reverse engineer, or misuse platform data except where expressly permitted by us in writing.',
+      'You must not upload harmful code, false information, unlawful content, or content that violates another person’s rights.',
+    ],
+  },
+  {
+    title: '9. Content and Intellectual Property',
+    items: [
+      'Shopyos, including its branding, software, designs, features, text, graphics, and platform content, is owned by Shopyos or its licensors.',
+      'Users may upload content such as product images, descriptions, messages, reviews, and profile information.',
+      'By uploading content, you give Shopyos permission to host, display, process, and use that content as needed to operate and promote the marketplace.',
+      'You are responsible for ensuring that any content you upload is lawful, accurate, and does not infringe any third-party rights.',
+    ],
+  },
+  {
+    title: '10. Reviews, Messages, and Community Standards',
+    items: [
+      'Users should communicate respectfully and honestly through Shopyos.',
+      'Reviews and feedback must reflect genuine experiences and must not be fake, paid for, threatening, abusive, or misleading.',
+      'We may moderate, remove, restrict, or investigate content and accounts that appear to violate these terms or harm marketplace trust.',
+    ],
+  },
+  {
+    title: '11. Account Suspension or Termination',
+    items: [
+      'We may suspend, restrict, or terminate access to Shopyos if we believe a user has violated these terms, created risk, engaged in fraud, or misused the platform.',
+      'You may stop using Shopyos at any time and may request account deletion through the app or by contacting support.',
+      'Some information may be retained where required for legal, accounting, fraud-prevention, dispute-resolution, or safety purposes.',
+    ],
+  },
+  {
+    title: '12. Availability and Changes to the Service',
+    items: [
+      'Shopyos may update, improve, pause, limit, or discontinue parts of the service at any time.',
+      'We aim to provide a reliable service, but we do not guarantee that Shopyos will always be available, uninterrupted, error-free, or compatible with every device.',
+      'Features may change as the platform develops, especially before and during launch.',
+    ],
+  },
+  {
+    title: '13. Disclaimers and Limitation of Liability',
+    items: [
+      'Shopyos is provided on an as-is and as-available basis to the maximum extent permitted by law.',
+      'We are not responsible for losses caused by user misconduct, inaccurate seller listings, third-party services, payment-provider issues, network failures, or events outside our reasonable control.',
+      'To the maximum extent permitted by law, Shopyos will not be liable for indirect, incidental, special, consequential, or punitive damages arising from your use of the platform.',
+    ],
+  },
+  {
+    title: '14. Privacy',
+    items: [
+      'Our Privacy Policy explains how we collect, use, share, retain, and protect personal information.',
+      'By using Shopyos, you acknowledge that your information will be handled according to our Privacy Policy.',
+    ],
+  },
+  {
+    title: '15. Changes to These Terms',
+    items: [
+      'We may update these Terms of Service from time to time to reflect platform changes, business needs, legal requirements, or improved user protections.',
+      'When material changes are made, we may notify users through the app, website, email, or other reasonable means.',
+      'Continued use of Shopyos after updated terms take effect means you accept the revised terms.',
+    ],
+  },
+];
+---
+<BaseLayout title="Terms of Service - Shopyos">
+  <section class="page-hero">
+    <div class="mx-auto w-[min(960px,calc(100%-40px))]">
+      <p class="eyebrow">Legal</p>
+      <h1 class="mt-4 text-5xl font-extrabold tracking-tight text-navy">Terms of Service</h1>
+      <p class="mt-4 max-w-3xl text-muted">These terms explain the rules for using Shopyos as a buyer, seller, delivery partner, visitor, or account holder.</p>
+      <p class="mt-6 inline-flex rounded-full bg-[#eef7e4] px-4 py-2 text-sm font-bold text-navy">Last updated: {lastUpdated}</p>
+    </div>
+  </section>
+
+  <section class="bg-[#f8fafb] py-16">
+    <div class="mx-auto grid w-[min(960px,calc(100%-40px))] gap-6">
+      <article class="rounded-3xl bg-white p-6 shadow-sm md:p-8">
+        <p class="text-lg leading-relaxed text-slate-600">Welcome to Shopyos. These Terms of Service govern your access to and use of the Shopyos website, mobile application, marketplace tools, and related services. Please read them carefully before using the platform.</p>
+      </article>
+
+      {sections.map((section) => (
+        <article class="rounded-3xl bg-white p-6 shadow-sm md:p-8">
+          <h2 class="text-2xl font-extrabold tracking-[-.02em] text-navy">{section.title}</h2>
+          <ul class="mt-5 grid gap-3 text-slate-600">
+            {section.items.map((item) => (
+              <li class="flex gap-3 leading-relaxed"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-lime"></span><span>{item}</span></li>
+            ))}
+          </ul>
+        </article>
+      ))}
+
+      <article class="rounded-3xl bg-navy p-6 text-white shadow-sm md:p-8">
+        <h2 class="text-2xl font-extrabold tracking-[-.02em]">16. Contact Us</h2>
+        <p class="mt-4 max-w-2xl leading-relaxed text-slate-200">If you have questions about these Terms of Service, contact the Shopyos team.</p>
+        <div class="mt-6 grid gap-3 text-slate-200">
+          <a class="font-bold text-lime" href="mailto:support@shopyos.com">support@shopyos.com</a>
+          <a class="font-bold text-lime" href="tel:+233506514687">+233 50 651 4687</a>
+          <p>Shopyos E-commerce Hub, 18 Nana Kesse Avenue, Ayeduase, near KNUST, Kumasi.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
