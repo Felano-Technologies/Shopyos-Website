@@ -1,0 +1,13 @@
+---
+import buyer from '../assets/buyer.png';
+import seller from '../assets/sellers.png';
+import delivery from '../assets/delivery.png';
+const cards = [
+  ['Buyers', buyer, '/buyers'],
+  ['Sellers', seller, '/sellers'],
+  ['Drivers', delivery, '/drivers'],
+];
+---
+<div class="mt-12 space-y-10">
+  {cards.map(([label, image, href]) => <a href={href} class="group block overflow-hidden"><img src={image.src} width={image.width} height={image.height} alt={`${label} and Shopyos`} class="block h-auto w-full transition duration-500 group-hover:scale-[1.01]" /></a>)}
+</div>

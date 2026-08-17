@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const lastUpdated = 'July 19, 2026';
+const sections = [
+  {
+    title: '1. Information We Collect',
+    items: [
+      'Personal Information: Name, email address, phone number, delivery address, and profile photo provided during registration or account setup.',
+      'Payment Information: Mobile money details and card information used for transactions. Payment data is processed securely through our third-party payment providers, such as Paystack, and is never stored on our servers.',
+      'Device Information: Device model, operating system, unique device identifiers, and push notification tokens.',
+      'Location Data: With your permission, we collect your GPS location to enable delivery tracking, store proximity search, and driver routing.',
+      'Usage Data: Pages visited, search queries, products viewed, order history, and in-app interactions to improve your experience.',
+      'Communication Data: Messages exchanged through our in-app chat system between buyers, sellers, and drivers.',
+    ],
+  },
+  {
+    title: '2. How We Use Your Information',
+    items: [
+      'Provide, operate, and maintain the Shopyos marketplace.',
+      'Process orders, payments, and delivery logistics.',
+      'Enable real-time communication between buyers, sellers, and drivers.',
+      'Send order confirmations, delivery updates, and account notifications via push notification, email, or SMS.',
+      'Personalise product recommendations and search results.',
+      'Detect fraud, prevent abuse, and enforce our Terms of Service.',
+      'Analyse usage patterns to improve app performance and features.',
+      'Comply with legal obligations and respond to lawful requests.',
+    ],
+  },
+  {
+    title: '3. Information Sharing',
+    intro: 'We do not sell your personal information. We may share your data only in the following circumstances:',
+    items: [
+      'With Sellers and Drivers: Your name, delivery address, and phone number are shared with sellers fulfilling your orders and drivers delivering them. This is necessary to complete your transaction.',
+      'Service Providers: We use trusted third-party services for payment processing, cloud hosting, email/SMS delivery, and analytics. These providers are contractually obligated to protect your data.',
+      'Legal Requirements: We may disclose information if required by law, regulation, or legal process, or to protect the rights, safety, or property of Shopyos, our users, or the public.',
+      'Business Transfers: In the event of a merger, acquisition, or sale of assets, user data may be transferred as part of the transaction.',
+    ],
+  },
+  {
+    title: '4. Data Security',
+    intro: 'We implement industry-standard security measures to protect your data:',
+    items: [
+      'All API communications use HTTPS/TLS encryption.',
+      'Authentication tokens are short-lived, with 15-minute access tokens, secure refresh token rotation, and SHA-256 hashing.',
+      'Stolen refresh tokens trigger automatic revocation of all associated sessions.',
+      'Passwords are hashed using bcrypt before storage.',
+      'Redis-backed rate limiting protects against brute-force attacks.',
+      'Device and IP-based session tracking enables suspicious activity detection.',
+      'While we strive to protect your data, no method of electronic transmission or storage is 100% secure. We cannot guarantee absolute security.',
+    ],
+  },
+  {
+    title: '5. Data Retention',
+    intro: 'We retain your personal data for as long as your account is active or as needed to provide you with our services. Specifically:',
+    items: [
+      'Account data is retained until you request deletion.',
+      'Order history is retained for up to 3 years for legal and accounting purposes.',
+      'Chat messages are retained for 1 year after the last conversation activity.',
+      'Server logs are retained for 90 days for security monitoring.',
+      'You may request deletion of your account and associated data at any time through the Privacy and Security settings in the app.',
+    ],
+  },
+  {
+    title: '6. Your Rights',
+    intro: 'Depending on your jurisdiction, you may have the following rights:',
+    items: [
+      'Access: Request a copy of the personal data we hold about you.',
+      'Correction: Update or correct inaccurate personal information.',
+      'Deletion: Request deletion of your account and personal data.',
+      'Data Export: Download your data in a portable format.',
+      'Withdraw Consent: Revoke permissions for location tracking, notifications, or marketing communications at any time.',
+      'Object: Object to certain processing activities, such as personalised advertising.',
+      'To exercise any of these rights, navigate to Settings > Privacy and Security in the app, or contact us at privacy@shopyos.com.',
+    ],
+  },
+  {
+    title: '7. Cookies and Tracking',
+    intro: 'Our mobile application does not use browser cookies. However, we may use:',
+    items: [
+      'Local Storage: AsyncStorage and SecureStore for persisting authentication tokens and user preferences on your device.',
+      'Analytics: Aggregated, anonymised usage metrics to understand feature adoption and app stability.',
+      'Push Notification Tokens: To deliver real-time order and delivery updates.',
+      'You can manage notification preferences in Settings > Push Notifications.',
+    ],
+  },
+  {
+    title: "8. Children's Privacy",
+    items: [
+      'Shopyos is not intended for use by children under the age of 16. We do not knowingly collect personal information from children.',
+      'If we discover that a child under 16 has provided us with personal data, we will promptly delete it.',
+      'If you are a parent or guardian and believe your child has provided us with personal information, please contact us at privacy@shopyos.com.',
+    ],
+  },
+  {
+    title: '9. Third-Party Links',
+    items: [
+      'The app may contain links to third-party websites or services, such as payment gateways and social media platforms.',
+      'We are not responsible for the privacy practices of these external services. We encourage you to review their privacy policies before providing any personal information.',
+    ],
+  },
+  {
+    title: '10. Changes to This Policy',
+    intro: 'We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we make material changes:',
+    items: [
+      'We will notify you via in-app notification or email.',
+      'The Last Updated date at the top of this policy will be revised.',
+      'Continued use of Shopyos after such changes constitutes acceptance of the updated policy.',
+    ],
+  },
+];
+---
+<BaseLayout title="Privacy Policy - Shopyos">
+  <section class="page-hero">
+    <div class="mx-auto w-[min(960px,calc(100%-40px))]">
+      <p class="eyebrow">Legal</p>
+      <h1 class="mt-4 text-5xl font-extrabold tracking-tight text-navy">Privacy Policy</h1>
+      <p class="mt-4 max-w-3xl text-muted">Your privacy matters to us. This policy explains how Shopyos collects, uses, discloses, and safeguards your information when you use the Shopyos mobile application and related services.</p>
+      <p class="mt-6 inline-flex rounded-full bg-[#eef7e4] px-4 py-2 text-sm font-bold text-navy">Last updated: {lastUpdated}</p>
+    </div>
+  </section>
+
+  <section class="bg-[#f8fafb] py-16">
+    <div class="mx-auto grid w-[min(960px,calc(100%-40px))] gap-6">
+      <article class="rounded-3xl bg-white p-6 shadow-sm md:p-8">
+        <p class="text-lg leading-relaxed text-slate-600">Shopyos ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the Shopyos mobile application and related services.</p>
+      </article>
+
+      {sections.map((section) => (
+        <article class="rounded-3xl bg-white p-6 shadow-sm md:p-8">
+          <h2 class="text-2xl font-extrabold tracking-[-.02em] text-navy">{section.title}</h2>
+          {section.intro && <p class="mt-4 leading-relaxed text-slate-600">{section.intro}</p>}
+          <ul class="mt-5 grid gap-3 text-slate-600">
+            {section.items.map((item) => (
+              <li class="flex gap-3 leading-relaxed"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-lime"></span><span>{item}</span></li>
+            ))}
+          </ul>
+        </article>
+      ))}
+
+      <article class="rounded-3xl bg-navy p-6 text-white shadow-sm md:p-8">
+        <h2 class="text-2xl font-extrabold tracking-[-.02em]">11. Contact Us</h2>
+        <p class="mt-4 max-w-2xl leading-relaxed text-slate-200">If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us.</p>
+        <div class="mt-6 grid gap-3 text-slate-200">
+          <a class="font-bold text-lime" href="mailto:privacy@shopyos.com">privacy@shopyos.com</a>
+          <a class="font-bold text-lime" href="mailto:support@shopyos.com">support@shopyos.com</a>
+          <a class="font-bold text-lime" href="https://www.shopyos.com">www.shopyos.com</a>
+          <p>Shopyos E-commerce Hub, 18 Nana Kesse Avenue, Ayeduase, near KNUST, Kumasi.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
