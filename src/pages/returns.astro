@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const lastUpdated = 'August 19, 2026';
+const sections = [
+  {
+    title: '1. Buyer Protection & Escrow',
+    items: [
+      'Shopyos protects buyers by holding all payments in escrow until the order is successfully fulfilled.',
+    ],
+  },
+  {
+    title: '2. Conditions for Returns & Refunds',
+    items: [
+      'Buyers are entitled to request a refund or return under the following circumstances:',
+      'The item was not delivered.',
+      'The item arrived damaged or defective.',
+      'The item received is significantly different from the product description or photos listed by the vendor.',
+      'The wrong item, size, or color was delivered.',
+    ],
+  },
+  {
+    title: '3. The Inspection Window',
+    items: [
+      'Upon receiving an order, buyers have a 48-hour inspection window to report any issues, defects, or non-compliance.',
+      'If no issue is reported within this timeframe, the order is marked as successfully completed, and the funds are released to the vendor.',
+    ],
+  },
+  {
+    title: '4. How to Request a Refund / Raise a Dispute',
+    items: [
+      'Report the Issue: Buyers must initiate a return/refund request via their Shopyos dashboard within 48 hours of delivery, providing clear photographic evidence and a description of the issue.',
+      'Funds Frozen: Upon raising a dispute, the funds associated with that order are immediately frozen in escrow.',
+      'Mediation: The Shopyos Mediation Team will review the evidence provided by both the buyer and the vendor (including dispatch proofs and product photos).',
+      'Resolution (Buyer): If resolved in the buyer\'s favor, the buyer must return the item to the vendor (shipping terms to be mediated based on fault). Once returned, a full refund will be routed back to the buyer\'s original payment method via our payment gateway (Paystack).',
+      'Resolution (Vendor): If resolved in the vendor\'s favor, the dispute will be closed, and the escrowed funds will be released to the vendor\'s settlement balance.',
+    ],
+  },
+  {
+    title: '5. Pre-Fulfillment Cancellations',
+    items: [
+      'If an order is canceled by either the buyer or the vendor before the item has been dispatched, a full refund is automatically processed back to the buyer’s original payment method.',
+    ],
+  },
+];
+---
+<BaseLayout title="Refund, Returns & Dispute Resolution - Shopyos">
+  <section class="page-hero">
+    <div class="mx-auto w-[min(960px,calc(100%-40px))]">
+      <p class="eyebrow">Legal</p>
+      <h1 class="mt-4 text-5xl font-extrabold tracking-tight text-navy">Refund, Returns & Dispute Resolution Policy</h1>
+      <p class="mt-4 max-w-3xl text-muted">This policy explains how buyer protection, escrow, returns, refunds, and disputes are handled on Shopyos.</p>
+      <p class="mt-6 inline-flex rounded-full bg-[#eef7e4] px-4 py-2 text-sm font-bold text-navy">Last updated: {lastUpdated}</p>
+    </div>
+  </section>
+
+  <section class="bg-[#f8fafb] py-16">
+    <div class="mx-auto grid w-[min(960px,calc(100%-40px))] gap-6">
+      {sections.map((section) => (
+        <article class="rounded-3xl bg-white p-6 shadow-sm md:p-8">
+          <h2 class="text-2xl font-extrabold tracking-[-.02em] text-navy">{section.title}</h2>
+          <ul class="mt-5 grid gap-3 text-slate-600">
+            {section.items.map((item) => (
+              <li class="flex gap-3 leading-relaxed"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-lime"></span><span>{item}</span></li>
+            ))}
+          </ul>
+        </article>
+      ))}
+      
+      <article class="rounded-3xl bg-navy p-6 text-white shadow-sm md:p-8">
+        <h2 class="text-2xl font-extrabold tracking-[-.02em]">Contact Us</h2>
+        <p class="mt-4 max-w-2xl leading-relaxed text-slate-200">If you have questions about returns or refunds, contact the Shopyos team.</p>
+        <div class="mt-6 grid gap-3 text-slate-200">
+          <a class="font-bold text-lime" href="mailto:support@shopyos.com">support@shopyos.com</a>
+          <a class="font-bold text-lime" href="tel:+233506514687">+233 50 651 4687</a>
+          <p>Shopyos E-commerce Hub, 18 Nana Kesse Avenue, Ayeduase, near KNUST, Kumasi.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

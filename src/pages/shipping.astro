@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const lastUpdated = 'August 19, 2026';
+const sections = [
+  {
+    title: '1. Fulfillment Model',
+    items: [
+      'Shopyos is a direct-to-consumer marketplace. We do not hold inventory or operate a centralized fulfillment center.',
+      'All products are shipped directly from the third-party vendor to the buyer.',
+    ],
+  },
+  {
+    title: '2. Vendor Shipping Responsibilities',
+    items: [
+      'Dispatch Times: Vendors are expected to process and dispatch orders within the timeframe specified on their product listing (typically 1–3 business days).',
+      'Logistics Partners: Vendors may use local couriers, logistics companies, or their own dispatch riders to fulfill orders.',
+      'Tracking & Updates: Vendors must provide dispatch confirmations, delivery tracking information (if applicable), and status updates directly through the Shopyos vendor dashboard.',
+    ],
+  },
+  {
+    title: '3. Buyer Delivery Information',
+    items: [
+      'Buyers must ensure that their delivery address and contact information are accurate at checkout.',
+      'Shipping costs are determined by the vendor and calculated at checkout based on the buyer’s location and the delivery method selected.',
+    ],
+  },
+  {
+    title: '4. Delivery Confirmation & Escrow',
+    items: [
+      'Funds paid by the buyer are held in a secure Shopyos escrow account.',
+      'The vendor\'s payment is only released for settlement after the buyer confirms successful delivery, or after the standard inspection window has passed without a dispute being raised.',
+    ],
+  },
+];
+---
+<BaseLayout title="Shipping & Delivery Policy - Shopyos">
+  <section class="page-hero">
+    <div class="mx-auto w-[min(960px,calc(100%-40px))]">
+      <p class="eyebrow">Legal</p>
+      <h1 class="mt-4 text-5xl font-extrabold tracking-tight text-navy">Shipping & Delivery Policy</h1>
+      <p class="mt-4 max-w-3xl text-muted">This policy outlines the shipping and delivery expectations for buyers and vendors on the Shopyos marketplace.</p>
+      <p class="mt-6 inline-flex rounded-full bg-[#eef7e4] px-4 py-2 text-sm font-bold text-navy">Last updated: {lastUpdated}</p>
+    </div>
+  </section>
+
+  <section class="bg-[#f8fafb] py-16">
+    <div class="mx-auto grid w-[min(960px,calc(100%-40px))] gap-6">
+      {sections.map((section) => (
+        <article class="rounded-3xl bg-white p-6 shadow-sm md:p-8">
+          <h2 class="text-2xl font-extrabold tracking-[-.02em] text-navy">{section.title}</h2>
+          <ul class="mt-5 grid gap-3 text-slate-600">
+            {section.items.map((item) => (
+              <li class="flex gap-3 leading-relaxed"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-lime"></span><span>{item}</span></li>
+            ))}
+          </ul>
+        </article>
+      ))}
+      
+      <article class="rounded-3xl bg-navy p-6 text-white shadow-sm md:p-8">
+        <h2 class="text-2xl font-extrabold tracking-[-.02em]">Contact Us</h2>
+        <p class="mt-4 max-w-2xl leading-relaxed text-slate-200">If you have questions about our shipping policy, contact the Shopyos team.</p>
+        <div class="mt-6 grid gap-3 text-slate-200">
+          <a class="font-bold text-lime" href="mailto:support@shopyos.com">support@shopyos.com</a>
+          <a class="font-bold text-lime" href="tel:+233506514687">+233 50 651 4687</a>
+          <p>Shopyos E-commerce Hub, 18 Nana Kesse Avenue, Ayeduase, near KNUST, Kumasi.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
