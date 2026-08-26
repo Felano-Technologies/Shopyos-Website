@@ -2,38 +2,38 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import EcosystemCards from '../components/EcosystemCards.astro';
 import adaptiveIcon from '../assets/adaptive-icon.png';
-import phone from '../assets/phone image.png';
+import phone from '../assets/andriod_phone.png';
 
 import googlePlayBadge from '../assets/store/GetItOnGooglePlay_Badge_Web_color_English.png';
 import appStoreBadge from '../assets/store/US/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg';
 ---
 <BaseLayout title="Shopyos — Local commerce for Ghana">
-  <section class="bg-[#f6f8fa] pb-16 pt-16 md:pb-24 md:pt-24"><div class="mx-auto grid w-[min(1240px,calc(100%-40px))] items-center gap-12 lg:grid-cols-[1.08fr_.92fr]"><div><p class="inline-flex items-center gap-2 rounded-full bg-[#e0f3cb] px-3 py-1 text-xs font-extrabold uppercase tracking-[.13em] text-navy"><img src={adaptiveIcon.src} width={adaptiveIcon.width} height={adaptiveIcon.height} alt="" class="h-5 w-5 object-contain" />Coming soon to Google Play and App Store</p><h1 class="mt-6 max-w-3xl text-5xl font-extrabold leading-[1.1] tracking-[-.055em] text-navy sm:text-6xl lg:text-7xl">The Future of <span class="text-lime">Local Commerce</span> is Shopyos</h1><p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">A seamless marketplace for buyers, sellers and delivery partners, built for the way Ghana shops and sells locally.</p><div class="mt-9 flex flex-wrap items-center gap-5"><a class="btn min-w-52" href="/contact">Pre-register now</a><a class="inline-flex items-center gap-2 font-bold text-navy" href="#ecosystem"><span class="grid h-6 w-6 place-items-center rounded-full border-2 border-navy text-[10px]">▶</span>See how it works</a></div></div><div class="rounded-[3rem] bg-white p-8 shadow-[0_3px_3px_rgba(15,35,95,.25)] md:p-12"><img src={phone.src} width={phone.width} height={phone.height} alt="Shopyos shopping app home screen" class="mx-auto max-h-[450px] w-auto object-contain" /></div></div></section>
+  <section data-parallax class="bg-[#f6f8fa] pb-16 pt-16 will-change-transform md:pb-24 md:pt-24"><div class="mx-auto grid w-[min(1240px,calc(100%-40px))] items-center gap-12 lg:grid-cols-[1.08fr_.92fr]"><div><p class="inline-flex items-center gap-2 rounded-full bg-[#e0f3cb] px-3 py-1 text-xs font-extrabold uppercase tracking-[.13em] text-navy"><img src={adaptiveIcon.src} width={adaptiveIcon.width} height={adaptiveIcon.height} alt="" class="h-5 w-5 object-contain" />Coming soon to Google Play and App Store</p><h1 class="mt-6 max-w-3xl text-5xl font-extrabold leading-[1.1] tracking-[-.055em] text-navy sm:text-6xl lg:text-7xl">The Future of <span class="text-lime">Local Commerce</span> is Shopyos</h1><p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">A seamless marketplace for buyers, sellers and delivery partners, built for the way Ghana shops and sells locally.</p><div class="mt-9 flex flex-wrap items-center gap-5"><a class="btn min-w-52" href="/contact">Pre-register now</a><a class="inline-flex items-center gap-2 font-bold text-navy" href="#ecosystem"><span class="grid h-6 w-6 place-items-center rounded-full border-2 border-navy text-[10px]">▶</span>See how it works</a></div></div><div class="mx-auto w-[220px] sm:w-[260px]"><div class="relative rounded-[2.75rem] bg-navy p-2 shadow-[0_25px_60px_-20px_rgba(16,35,95,.55)] transition-all duration-500 hover:-translate-y-2 hover:rotate-1 hover:scale-[1.03] hover:shadow-[0_35px_80px_-15px_rgba(16,35,95,.65)]"><span class="absolute -left-1 top-24 h-8 w-1 rounded-l bg-[#0a1740]"></span><span class="absolute -left-1 top-36 h-12 w-1 rounded-l bg-[#0a1740]"></span><span class="absolute -right-1 top-28 h-16 w-1 rounded-r bg-[#0a1740]"></span><div class="relative overflow-hidden rounded-[2.25rem] bg-white"><span class="absolute left-1/2 top-0 z-10 h-5 w-24 -translate-x-1/2 rounded-b-xl bg-navy"></span><img src={phone.src} width={phone.width} height={phone.height} alt="Shopyos shopping app home screen" class="block w-full" /></div></div></div></div></section>
   <section id="ecosystem" class="bg-[#eef2f5] py-20 md:py-28"><div class="mx-auto w-[min(1120px,calc(100%-40px))]"><div class="mx-auto max-w-2xl text-center"><h2 class="text-4xl font-extrabold tracking-[-.04em] text-navy md:text-5xl">Empowering the Entire Ecosystem</h2><p class="mt-5 text-lg text-slate-600">Built for the modern economy, Shopyos connects everyone with purpose-driven tools.</p></div><EcosystemCards /></div></section>
   <section class="bg-[#f8fafb] py-20 md:py-28"><div class="mx-auto grid w-[min(1120px,calc(100%-40px))] items-center gap-12 lg:grid-cols-[.95fr_1.05fr]"><div class="grid grid-cols-2 gap-4">
-        <div class="flex h-full flex-col justify-end rounded-[2rem] bg-white p-6 shadow-sm">
+        <div class="flex h-full flex-col justify-end rounded-xl bg-white p-6 shadow-sm">
           <span class="mb-auto inline-block h-5 w-5 rounded-full bg-lime ring-4 ring-lime/20"></span>
           <h3 class="mt-10 text-lg font-bold text-navy">Account Security</h3>
           <p class="mt-4 text-sm text-slate-600">Built-in protections to keep your data and transactions safe.</p>
         </div>
-        <div class="flex h-full flex-col justify-end rounded-[2rem] bg-white p-6 shadow-sm">
+        <div class="flex h-full flex-col justify-end rounded-xl bg-white p-6 shadow-sm">
           <span class="mb-auto inline-block h-5 w-5 rounded-full bg-lime ring-4 ring-lime/20"></span>
           <h3 class="mt-10 text-lg font-bold text-navy">GPS tracking</h3>
           <p class="mt-4 text-sm text-slate-600">Read precision real-time location updates from seller to doorstep.</p>
         </div>
-        <div class="flex h-full flex-col justify-end rounded-[2rem] bg-white p-6 shadow-sm">
+        <div class="flex h-full flex-col justify-end rounded-xl bg-white p-6 shadow-sm">
           <span class="mb-auto inline-block h-5 w-5 rounded-full bg-lime ring-4 ring-lime/20"></span>
           <h3 class="mt-10 text-lg font-bold text-navy">Secure checkout</h3>
           <p class="mt-4 text-sm text-slate-600">Designed for familiar payment methods and trusted local shopping.</p>
         </div>
-        <div class="flex h-full flex-col justify-end rounded-[2rem] bg-white p-6 shadow-sm">
+        <div class="flex h-full flex-col justify-end rounded-xl bg-white p-6 shadow-sm">
           <span class="mb-auto inline-block h-5 w-5 rounded-full bg-lime ring-4 ring-lime/20"></span>
           <h3 class="mt-10 text-lg font-bold text-navy">Customer Support</h3>
           <p class="mt-4 text-sm text-slate-600">Get help when you need it with dedicated chat and support tools.</p>
         </div>
       </div><div><p class="eyebrow">Unmatched reliability</p><h2 class="mt-4 text-4xl font-extrabold tracking-[-.045em] text-navy md:text-5xl">Technology that puts trust first.</h2><div class="mt-9 space-y-7"><div class="flex gap-4"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[#eff7e4] text-xl text-navy">✿</span><div><h3 class="text-lg font-bold text-navy">Seller verification and reviews</h3><p class="mt-1 text-slate-600">Trust signals help shoppers make informed local purchasing choices.</p></div></div><div class="flex gap-4"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[#eff7e4] text-xl text-navy">♢</span><div><h3 class="text-lg font-bold text-navy">Clear order updates</h3><p class="mt-1 text-slate-600">Follow order progress and delivery status with a transparent flow.</p></div></div><div class="flex gap-4"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[#eff7e4] text-xl text-navy">◉</span><div><h3 class="text-lg font-bold text-navy">Helpful support</h3><p class="mt-1 text-slate-600">Keep customers and sellers connected with chat and support tools.</p></div></div></div></div></div></section>
   <section class="bg-[#f8fafb] pb-20">
-    <div class="mx-auto grid w-[min(1120px,calc(100%-40px))] items-center gap-8 rounded-[2.25rem] bg-[linear-gradient(135deg,#10235f,#111965)] px-6 py-10 text-white md:grid-cols-[1fr_auto] md:px-10 md:py-12">
+    <div class="mx-auto grid w-[min(1120px,calc(100%-40px))] items-center gap-8 rounded-2xl bg-[radial-gradient(circle_at_85%_20%,rgba(132,204,22,.25),transparent_45%),linear-gradient(135deg,#10235f,#0a1740)] px-6 py-10 text-white md:grid-cols-[1fr_auto] md:px-10 md:py-12">
       <div>
         <p class="inline-flex items-center gap-2 rounded-full bg-lime px-4 py-1 text-xs font-extrabold uppercase tracking-[.15em] text-navy">
           Mobile apps coming soon
@@ -51,5 +51,32 @@ import appStoreBadge from '../assets/store/US/Download_on_App_Store/White_lockup
       </div>
     </div>
   </section>
-  <section class="bg-[#f8fafb] pb-20"><div class="mx-auto w-[min(1120px,calc(100%-40px))] rounded-[2.5rem] bg-[linear-gradient(135deg,#111965,#0d164d)] px-6 py-16 text-center text-white md:px-16 md:py-20"><p class="inline-block rounded-full bg-lime px-4 py-1 text-xs font-extrabold uppercase tracking-[.15em] text-navy">The launch countdown</p><h2 class="mx-auto mt-7 max-w-2xl text-4xl font-extrabold tracking-[-.045em] md:text-6xl">Be the first to trade on <span class="text-lime">Shopyos.</span></h2><p class="mx-auto mt-5 max-w-xl text-lg text-slate-200">Get launch news and early-access updates for a marketplace designed for Ghanaian shoppers and sellers.</p><a class="btn mt-9 min-w-52" href="/contact">Join waitlist</a></div></section>
+  <section class="bg-[#f8fafb] pb-20"><div class="mx-auto w-[min(1120px,calc(100%-40px))] rounded-2xl bg-[radial-gradient(circle_at_15%_80%,rgba(132,204,22,.2),transparent_45%),linear-gradient(135deg,#111965,#0a1740)] px-6 py-16 text-center text-white md:px-16 md:py-20"><p class="inline-block rounded-full bg-lime px-4 py-1 text-xs font-extrabold uppercase tracking-[.15em] text-navy">The launch countdown</p><h2 class="mx-auto mt-7 max-w-2xl text-4xl font-extrabold tracking-[-.045em] md:text-6xl">Be the first to trade on <span class="text-lime">Shopyos.</span></h2><p class="mx-auto mt-5 max-w-xl text-lg text-slate-200">Get launch news and early-access updates for a marketplace designed for Ghanaian shoppers and sellers.</p><a class="btn mt-9 min-w-52" href="/contact">Join waitlist</a></div></section>
 </BaseLayout>
+
+<script>
+  const el = document.querySelector<HTMLElement>('[data-parallax]');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (el && !prefersReducedMotion) {
+    let ticking = false;
+
+    const update = () => {
+      const rect = el.getBoundingClientRect();
+      const progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+      const offset = (progress - 0.5) * 60;
+      el.style.transform = `translateY(${offset}px)`;
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    };
+
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+</script>

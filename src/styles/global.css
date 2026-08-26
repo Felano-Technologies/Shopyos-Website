@@ -15,12 +15,42 @@
   --font-display: 'Plus Jakarta Sans', sans-serif;
 }
 
+@keyframes mobile-nav-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes mobile-link-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @layer base {
   body {
     @apply bg-white font-sans text-ink antialiased;
   }
   h1, h2, h3 {
     @apply font-display;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-navy) var(--color-wash);
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-wash);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-navy);
+    border-radius: 9999px;
+    border: 2px solid var(--color-wash);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-lime);
   }
 }
 
