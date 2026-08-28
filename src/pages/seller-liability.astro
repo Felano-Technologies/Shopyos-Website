@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const lastUpdated = 'August 27, 2026';
+const sections = [
+  {
+    title: '1. No Escrow or Custody of Seller Funds',
+    items: [
+      'The Platform does not provide escrow, custodial or deposit-taking services. Transaction payments are processed through the Shopyos’ designated payment service provider and, where applicable, may be split and settled directly to the Seller in accordance with the payment service provider\'s settlement arrangements.',
+      'The Platform does not represent that it will retain, safeguard or hold the Seller\'s transaction proceeds pending delivery of goods or resolution of Buyer disputes.',
+    ],
+  },
+  {
+    title: '2. Seller\'s Continuing Liability',
+    items: [
+      'Settlement of transaction proceeds to the Seller does not release or discharge the Seller from any obligation arising from the transaction.',
+      'The Seller remains fully responsible for: (a) delivering the goods or services purchased by the Buyer; (b) ensuring that goods or services correspond materially with their listing and description; (c) complying with applicable return and refund obligations; (d) resolving legitimate Buyer complaints; and (e) paying any refund or other amount properly determined to be due to the Buyer.',
+    ],
+  },
+  {
+    title: '3. Refunds After Settlement',
+    items: [
+      'Where transaction proceeds have already been settled to the Seller and the Seller subsequently becomes liable to refund the Buyer, the Seller shall make the refund directly in accordance with the Platform\'s refund procedure within the period specified by the Platform.',
+      'The fact that the Seller has already received or withdrawn the transaction proceeds shall not affect the Seller\'s obligation to refund the Buyer.',
+    ],
+  },
+  {
+    title: '4. Failure to Pay Refund',
+    items: [
+      'Where a Seller fails to pay a valid refund after receiving notice and a reasonable opportunity to remedy the matter, the Shopyos may: (a) suspend the Seller\'s account; (b) prevent the Seller from creating new listings or accepting new orders; (c) remove or disable the Seller\'s listings; (d) require the Seller to provide evidence of payment or refund; (e) recover amounts owed from any future amounts otherwise payable to the Seller through the Platform, to the extent legally and technically permissible; (f) seek recovery of amounts properly owed by the Seller; (g) terminate the Seller\'s account; and (h) pursue any other contractual or legal remedy available to the Platform or the affected Buyer.',
+    ],
+  },
+  {
+    title: '5. No Automatic Recovery from Settled Funds',
+    items: [
+      'Where transaction proceeds have already been settled directly to the Seller by the Platform\'s payment service provider, the Platform shall not represent that it has custody or control of those funds.',
+      'The Seller acknowledges that the Platform may therefore be unable to immediately recover amounts that have already been settled and withdrawn by the Seller.',
+      'The Seller\'s liability to the Buyer nevertheless survives settlement, withdrawal, suspension or termination of the Seller\'s Platform account.',
+    ],
+  },
+  {
+    title: '6. Fraudulent Refund Conduct',
+    items: [
+      'A Seller who knowingly makes a false representation that a refund has been paid, deliberately refuses to honour a valid refund, submits fabricated evidence of a refund, or otherwise intentionally attempts to deprive a Buyer of money or property may be deemed by the Platform to have committed a Fraudulent Refund Event and a material breach of these Terms.',
+      'A single substantiated incident of deliberate or dishonest conduct may constitute a Fraudulent Refund Event.',
+      'An accidental payment failure, banking delay, technical error or genuine inability to complete a refund shall not, by itself, constitute fraud where the Seller promptly discloses the issue and takes reasonable steps to remedy it.',
+    ],
+  },
+  {
+    title: '7. Consequences of Fraudulent Refund Conduct',
+    items: [
+      'Following a Fraudulent Refund Event, the Platform may, subject to applicable law: (a) immediately suspend or terminate the Seller\'s account; (b) prevent the Seller from accepting further orders; (c) remove the Seller\'s listings; (d) require immediate repayment of amounts owed to the affected Buyer; (e) seek recovery of amounts owed through available contractual, payment-provider or legal mechanisms; (f) restrict the Seller from registering another account on the Platform; (g) require enhanced identity or compliance verification; (h) share relevant information with the Platform\'s payment service provider, financial institutions, regulators or law-enforcement authorities where appropriate and legally permitted; and (i) pursue any other remedy available under these Terms or applicable law.',
+    ],
+  },
+  {
+    title: '8. Outstanding Amounts Survive Account Closure',
+    items: [
+      'Closing, suspending or terminating a Seller\'s account does not extinguish any amount owed by the Seller arising from a transaction conducted through the Platform.',
+      'The Seller remains responsible for all valid refunds, claims, losses and other liabilities arising before or after account closure where those liabilities relate to transactions conducted through the Platform.',
+    ],
+  },
+  {
+    title: '9. Buyer Protection',
+    items: [
+      'Shopyos may investigate Buyer complaints, facilitate communication between Buyers and Sellers, determine whether a transaction appears to qualify for a refund under Shopyos’ policies, and take appropriate action against Sellers.',
+      'For qualifying transactions, we will refund eligible Buyers from the Platform\'s available funds through our payment service provider and subsequently seek recovery from the responsible Seller.',
+      'Nothing in these Terms limits any mandatory rights or remedies available to a Buyer under applicable law.',
+    ],
+  },
+];
+---
+<BaseLayout title="Post-Settlement Seller Liability - Shopyos">
+  <section class="page-hero">
+    <div class="mx-auto w-[min(960px,calc(100%-40px))]">
+      <p class="eyebrow">Legal</p>
+      <h1 class="mt-4 text-5xl font-extrabold tracking-tight text-navy">Post-Settlement Seller Liability</h1>
+      <p class="mt-4 max-w-3xl text-muted">This policy outlines the continuing obligations of Sellers after transaction proceeds have been settled.</p>
+      <p class="mt-6 inline-flex rounded-full bg-[#eef7e4] px-4 py-2 text-sm font-bold text-navy">Effective Date: {lastUpdated}</p>
+    </div>
+  </section>
+
+  <section class="bg-[#f8fafb] py-16">
+    <div class="mx-auto grid w-[min(960px,calc(100%-40px))] gap-6">
+      {sections.map((section) => (
+        <article class="rounded-3xl bg-white p-6 shadow-sm md:p-8">
+          <h2 class="text-2xl font-extrabold tracking-[-.02em] text-navy">{section.title}</h2>
+          <ul class="mt-5 grid gap-3 text-slate-600">
+            {section.items.map((item) => (
+              <li class="flex gap-3 leading-relaxed"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-lime"></span><span>{item}</span></li>
+            ))}
+          </ul>
+        </article>
+      ))}
+      
+      <article class="rounded-3xl bg-navy p-6 text-white shadow-sm md:p-8">
+        <h2 class="text-2xl font-extrabold tracking-[-.02em]">Contact Us</h2>
+        <p class="mt-4 max-w-2xl leading-relaxed text-slate-200">If you have questions about seller liability, contact the Shopyos team.</p>
+        <div class="mt-6 grid gap-3 text-slate-200">
+          <a class="font-bold text-lime" href="mailto:support@shopyos.com">support@shopyos.com</a>
+          <a class="font-bold text-lime" href="tel:+233506514687">+233 50 651 4687</a>
+          <p>Shopyos E-commerce Hub, 18 Nana Kesse Avenue, Ayeduase, near KNUST, Kumasi.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
