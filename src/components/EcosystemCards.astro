@@ -8,6 +8,83 @@ const cards = [
   ['Drivers', delivery, '/drivers'],
 ];
 ---
-<div class="mt-12 space-y-10">
-  {cards.map(([label, image, href]) => <a href={href} class="group block overflow-hidden"><img src={image.src} width={image.width} height={image.height} alt={`${label} and Shopyos`} class="block h-auto w-full transition duration-500 group-hover:scale-[1.01]" /></a>)}
+<div data-carousel class="relative mt-12">
+  <div data-carousel-track class="flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+    {cards.map(([label, image, href]) => (
+      <a href={href} class="group block w-[95%] shrink-0 snap-start overflow-hidden sm:w-[92%] md:w-[90%]">
+        <img src={image.src} width={image.width} height={image.height} alt={`${label} and Shopyos`} class="block h-auto w-full transition duration-500 group-hover:scale-[1.01]" />
+      </a>
+    ))}
+  </div>
+
+  <button type="button" data-carousel-prev aria-label="Previous slide" class="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl font-bold text-navy shadow-md transition hover:bg-white">‹</button>
+  <button type="button" data-carousel-next aria-label="Next slide" class="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl font-bold text-navy shadow-md transition hover:bg-white">›</button>
+
+  <div class="mt-5 flex items-center justify-center gap-2">
+    {cards.map((_, i) => (
+      <button type="button" data-carousel-dot={i} aria-label={`Go to slide ${i + 1}`} class="h-2.5 w-2.5 rounded-full bg-navy/20 transition-all data-[active]:w-6 data-[active]:bg-lime"></button>
+    ))}
+  </div>
 </div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-carousel]').forEach((root) => {
+    const track = root.querySelector<HTMLElement>('[data-carousel-track]');
+    const slides = Array.from(track?.children ?? []) as HTMLElement[];
+    const dots = Array.from(root.querySelectorAll<HTMLElement>('[data-carousel-dot]'));
+    const prevBtn = root.querySelector<HTMLElement>('[data-carousel-prev]');
+    const nextBtn = root.querySelector<HTMLElement>('[data-carousel-next]');
+    if (!track || slides.length === 0) return;
+
+    let index = 0;
+    let autoplay: number | undefined;
+
+    const setActive = (i: number) => {
+      index = (i + slides.length) % slides.length;
+      dots.forEach((dot, d) => {
+        if (d === index) dot.setAttribute('data-active', '');
+        else dot.removeAttribute('data-active');
+      });
+    };
+
+    const goTo = (i: number) => {
+      setActive(i);
+      track.scrollTo({ left: slides[index].offsetLeft, behavior: 'smooth' });
+    };
+
+    prevBtn?.addEventListener('click', () => goTo(index - 1));
+    nextBtn?.addEventListener('click', () => goTo(index + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+    track.addEventListener(
+      'scroll',
+      () => {
+        let closest = 0;
+        let minDist = Infinity;
+        slides.forEach((slide, i) => {
+          const dist = Math.abs(slide.offsetLeft - track.scrollLeft);
+          if (dist < minDist) {
+            minDist = dist;
+            closest = i;
+          }
+        });
+        if (closest !== index) setActive(closest);
+      },
+      { passive: true }
+    );
+
+    const stopAutoplay = () => {
+      if (autoplay) window.clearInterval(autoplay);
+    };
+    const startAutoplay = () => {
+      stopAutoplay();
+      autoplay = window.setInterval(() => goTo(index + 1), 2200);
+    };
+
+    root.addEventListener('mouseenter', stopAutoplay);
+    root.addEventListener('mouseleave', startAutoplay);
+
+    setActive(0);
+    startAutoplay();
+  });
+</script>
