@@ -1,69 +1,201 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const lastUpdated = 'August 19, 2026';
+const lastUpdated = 'August 27, 2026';
+const intro = [
+  'This Buyer Refund and Buyer Protection Policy ("Policy") forms part of the Shopyos Terms and Conditions and applies to purchases made through our platform.',
+  'The purpose of this Policy is to provide Buyers with a clear process for reporting problems with purchases and seeking refunds or other appropriate remedies.',
+  'Shopyos operates as an online marketplace and uses third-party payment service providers to process transactions. Our Platform does not provide escrow or custodial services. Accordingly, payment of transaction proceeds to a Seller does not affect the Seller\'s continuing obligations to the Buyer.',
+];
+
 const sections = [
   {
-    title: '1. Buyer Protection & Escrow',
+    title: '1. When a Buyer May Request a Refund',
+    intro: 'A Buyer may submit a refund or dispute request where one or more of the following applies:',
     items: [
-      'Shopyos protects buyers by holding all payments in escrow until the order is successfully fulfilled.',
+      'The Seller has not delivered the purchased item within the applicable delivery period.',
+      'The item received is materially different from the description or listing.',
+      'The wrong item was delivered.',
+      'The item is materially damaged or defective upon delivery, where the applicable return/refund rules permit a refund.',
+      'The item is reasonably suspected to be counterfeit, fraudulent, stolen or unlawfully obtained.',
+      'The Seller cancelled the transaction after receiving payment without a legitimate reason.',
+      'The Seller has otherwise materially failed to fulfil the transaction.',
+      'The Buyer was charged for an order that was not properly fulfilled.',
+      'The Seller has agreed or is otherwise required to provide a refund but has failed to do so.',
+    ],
+    outro: 'Shopyos may also consider other circumstances where a refund or other remedy is required by applicable law.',
+  },
+  {
+    title: '2. Refund Request Period',
+    items: [
+      'Unless a different period applies to a particular product category or is required by law, a Buyer should submit a refund or dispute request as soon as reasonably possible and preferably within <strong>24 hours</strong> after delivery.',
+      'For non-delivery claims, the Buyer should submit the claim within <strong>24 hours</strong> after the expected delivery date.',
+      'Nothing in this Policy limits a Buyer\'s mandatory rights under applicable law.',
     ],
   },
   {
-    title: '2. Conditions for Returns & Refunds',
+    title: '3. Evidence and Information',
     items: [
-      'Buyers are entitled to request a refund or return under the following circumstances:',
-      'The item was not delivered.',
-      'The item arrived damaged or defective.',
-      'The item received is significantly different from the product description or photos listed by the vendor.',
-      'The wrong item, size, or color was delivered.',
+      'To enable the Platform to investigate a claim, the Buyer may be required to provide reasonable evidence, which may include: order or transaction information; photographs or videos of the item received; photographs of packaging, labels or shipping information; evidence of damage or defects; evidence that the item differs materially.',
     ],
   },
   {
-    title: '3. The Inspection Window',
+    title: '4. Buyer Protection Guarantee',
     items: [
-      'Upon receiving an order, buyers have a 48-hour inspection window to report any issues, defects, or non-compliance.',
-      'If no issue is reported within this timeframe, the order is marked as successfully completed, and the funds are released to the vendor.',
+      'Subject to the eligibility requirements and procedures contained in this Policy, Shopyos provides a Buyer Protection Guarantee for qualifying transactions completed through the Platform.',
+      'Where the Platform determines that a Buyer is entitled to a refund under this Policy, the Platform will arrange for the applicable refund to be paid to the Buyer through its designated payment service provider, subject to the payment service provider\'s applicable procedures and requirements.',
+      'The Buyer does not need to recover the refund directly from the Seller in order to receive a refund approved under the Buyer Protection Guarantee.',
     ],
   },
   {
-    title: '4. How to Request a Refund / Raise a Dispute',
+    title: '5. No Escrow',
     items: [
-      'Report the Issue: Buyers must initiate a return/refund request via their Shopyos dashboard within 48 hours of delivery, providing clear photographic evidence and a description of the issue.',
-      'Funds Frozen: Upon raising a dispute, the funds associated with that order are immediately frozen in escrow.',
-      'Mediation: The Shopyos Mediation Team will review the evidence provided by both the buyer and the vendor (including dispatch proofs and product photos).',
-      'Resolution (Buyer): If resolved in the buyer\'s favor, the buyer must return the item to the vendor (shipping terms to be mediated based on fault). Once returned, a full refund will be routed back to the buyer\'s original payment method via our payment gateway (Paystack).',
-      'Resolution (Vendor): If resolved in the vendor\'s favor, the dispute will be closed, and the escrowed funds will be released to the vendor\'s settlement balance.',
+      'The Buyer Protection Guarantee does not constitute an escrow, custodial or deposit-taking arrangement.',
+      'Transaction funds may be settled to Sellers through the Platform\'s designated payment service provider (Paystack) in accordance with the applicable settlement arrangements.',
+      'The Buyer Protection Guarantee is a separate contractual protection provided by the Platform and does not mean that transaction funds are held by the Platform pending delivery or completion of an order.',
     ],
   },
   {
-    title: '5. Pre-Fulfillment Cancellations',
+    title: '6. When the Guarantee Applies',
     items: [
-      'If an order is canceled by either the buyer or the vendor before the item has been dispatched, a full refund is automatically processed back to the buyer’s original payment method.',
+      'A Buyer may qualify for protection where the Platform determines that: (a) the Buyer paid for a transaction through the Platform; (b) the transaction was not properly fulfilled; (c) the Buyer has complied with the applicable dispute and refund procedures; and (d) the Buyer is entitled to a refund under this Policy or applicable law.',
+      'Examples of potentially qualifying circumstances include non-delivery, materially misrepresented goods, delivery of the wrong goods, qualifying damaged or defective goods, and other material failures by the Seller to fulfil the transaction.',
     ],
   },
+  {
+    title: '7. Refund Following Seller Settlement',
+    items: [
+      'The fact that transaction proceeds have already been settled to the Seller does not prevent an eligible Buyer from receiving a refund under the Buyer Protection Guarantee.',
+      'Where the Platform approves a refund after the Seller has already received settlement, the Platform may arrange payment of the approved refund to the Buyer through its designated payment service provider or other applicable payment mechanism.',
+      'The Seller remains liable to the Platform for the amount refunded on the Seller\'s behalf.',
+    ],
+  },
+  {
+    title: '8. Seller\'s Reimbursement Obligation',
+    items: [
+      'Where the Platform pays or causes a refund to be paid to a Buyer as a result of the Seller\'s failure, breach, misconduct or other liability, the Seller shall reimburse the Platform for the amount of the refund.',
+      'The Seller\'s reimbursement obligation arises independently of whether the Seller has already received, withdrawn or otherwise disposed of the original transaction proceeds.',
+      'The Seller shall reimburse the Platform within 48 hours of receiving notice of the amount due, unless another period is specified by the Platform.',
+    ],
+  },
+  {
+    title: '9. Recovery From Future Transactions',
+    items: [
+      'Where a Seller owes the Platform an amount arising from a Buyer refund, chargeback, loss or other verified transaction liability, the Platform may, to the extent legally and technically permissible, apply amounts otherwise payable to the Seller from future transactions toward the outstanding amount.',
+      'The Platform may continue applying future amounts until the outstanding liability has been satisfied.',
+    ],
+  },
+  {
+    title: '10. Insufficient Future Proceeds',
+    items: [
+      'Where future amounts payable to the Seller are insufficient to satisfy the Seller\'s liability, the Seller remains responsible for the unpaid balance.',
+      'Suspension, termination or closure of the Seller\'s account does not extinguish the Seller\'s obligation to reimburse the Platform.',
+    ],
+  },
+  {
+    title: '11. Seller\'s Liability Following Buyer Protection Payment',
+    items: [
+      'A refund paid to a Buyer under the Buyer Protection Guarantee shall not release the Seller from liability arising from the underlying transaction.',
+      'To the extent permitted by applicable law, the Platform may seek recovery from the Seller of: (a) the amount refunded to the Buyer; (b) applicable payment-provider fees or reversal costs arising from the transaction; (c) reasonable administrative or recovery costs directly attributable to the Seller\'s default; and (d) any other amount for which the Seller is contractually or legally responsible.',
+    ],
+  },
+  {
+    title: '12. Fraudulent Claims by Buyers',
+    items: [
+      'The Buyer Protection Guarantee is not available to Buyers who knowingly submit false, fraudulent or misleading claims.',
+      'Where the Platform determines that a Buyer has deliberately attempted to obtain a refund to which the Buyer is not entitled, the Platform may: (a) reject the claim; (b) reverse or recover an improperly issued refund where legally and technically possible; (c) suspend or terminate the Buyer\'s account; and (d) take other appropriate action permitted by law.',
+    ],
+  },
+  {
+    title: '13. Fraudulent Seller Conduct',
+    items: [
+      'Where a Seller deliberately engages in conduct resulting in a qualifying Buyer refund, including knowingly accepting payment without intending to fulfil the transaction, falsely representing delivery, supplying counterfeit goods, fabricating refund evidence or deliberately refusing a valid refund, the Platform may classify the conduct as a Fraudulent Seller Event.',
+      'A single substantiated incident of deliberate or dishonest conduct may constitute a Fraudulent Seller Event.',
+    ],
+  },
+  {
+    title: '14. Consequences for Fraudulent Seller Conduct',
+    items: [
+      'Following a Fraudulent Seller Event, the Platform may: (a) immediately suspend the Seller; (b) prevent the Seller from accepting additional orders; (c) remove the Seller\'s listings; (d) pay an eligible Buyer in accordance with the Buyer Protection Guarantee; (e) recover the refunded amount and associated costs from the Seller; (f) apply eligible future Seller proceeds toward the outstanding liability; (g) permanently terminate the Seller\'s account; (h) prevent the Seller from creating another account; (i) require additional identity or compliance verification; and (j) report suspected unlawful conduct to the appropriate payment provider, regulator, law-enforcement authority or other competent body where appropriate and legally permitted.',
+    ],
+  },
+  {
+    title: '15. Relationship With Payment Service Provider',
+    items: [
+      'Refunds under the Buyer Protection Guarantee may be processed through the Platform\'s designated payment service provider.',
+      'The timing and method of payment of an approved refund may therefore be subject to the payment service provider\'s processing procedures.',
+      'The Platform will communicate the applicable refund status to the Buyer where reasonably possible.',
+    ],
+  },
+  {
+    title: '16. Limits of the Guarantee',
+    items: [
+      'The Buyer Protection Guarantee applies only to qualifying transactions and claims that satisfy this Policy.',
+      'The Platform may decline a refund where: (a) the Buyer has materially misrepresented the circumstances of the transaction; (b) the Buyer has intentionally damaged or altered the goods; (c) the Buyer has already received the benefit of the transaction and has no valid basis for a refund; (d) the claim falls outside the applicable claim period without a legally required exception; (e) the Buyer has failed to provide reasonably requested evidence; (f) the dispute is primarily a change-of-mind purchase where no applicable refund right exists; or (g) the claim otherwise falls outside the scope of this Policy or applicable law.',
+      'Nothing in this section limits mandatory consumer rights.',
+    ],
+  },
+  {
+    title: '17. Maximum Refund',
+    items: [
+      'Unless otherwise expressly stated by the Platform or required by applicable law, the maximum amount payable under the Buyer Protection Guarantee shall be the amount actually paid by the Buyer for the affected transaction, including applicable delivery charges where the Platform determines that such charges should be refunded.',
+      'The Platform shall not be responsible for consequential, indirect or speculative losses unless required by applicable law.',
+    ],
+  },
+  {
+    title: '18. Platform\'s Right of Recovery',
+    items: [
+      'By participating in the Platform, the Seller expressly acknowledges that where the Platform refunds a Buyer because of the Seller\'s breach, misconduct or failure to fulfil a transaction, the Platform is entitled to seek reimbursement from the Seller to the extent permitted by law.',
+      'The Seller authorises the Platform, where legally and technically permissible, to apply amounts otherwise payable to the Seller toward such verified liabilities.',
+      'This recovery right survives suspension, termination and closure of the Seller\'s account.',
+    ],
+  },
+  {
+    title: '19. No Double Recovery',
+    items: [
+      'A Buyer shall not be entitled to recover the same loss twice through the Platform, the Seller, a payment-provider dispute process or another recovery mechanism.',
+      'Where a Buyer receives a refund from another source after receiving a refund from the Platform, the Buyer must promptly notify the Platform and cooperate in resolving any resulting overpayment.',
+    ],
+  },
+  {
+    title: '20. Applicable Law',
+    items: [
+      'Nothing in this Buyer Protection Guarantee excludes, restricts or limits any mandatory right or remedy available to a Buyer under applicable Ghanaian law.',
+      'Where a provision of this Policy conflicts with a mandatory legal requirement, the mandatory legal requirement shall prevail.',
+    ],
+  }
 ];
 ---
-<BaseLayout title="Refund, Returns & Dispute Resolution - Shopyos">
+<BaseLayout title="Buyer Refund, Protection Policy and Guarantees - Shopyos">
   <section class="page-hero">
     <div class="mx-auto w-[min(960px,calc(100%-40px))]">
       <p class="eyebrow">Legal</p>
-      <h1 class="mt-4 text-5xl font-extrabold tracking-tight text-navy">Refund, Returns & Dispute Resolution Policy</h1>
-      <p class="mt-4 max-w-3xl text-muted">This policy explains how buyer protection, escrow, returns, refunds, and disputes are handled on Shopyos.</p>
-      <p class="mt-6 inline-flex rounded-full bg-[#eef7e4] px-4 py-2 text-sm font-bold text-navy">Last updated: {lastUpdated}</p>
+      <h1 class="mt-4 text-5xl font-extrabold tracking-tight text-navy">Buyer Refund, Protection Policy and Guarantees</h1>
+      <p class="mt-4 max-w-3xl text-muted">This policy explains the process for reporting problems with purchases and seeking refunds or other remedies.</p>
+      <p class="mt-6 inline-flex rounded-full bg-[#eef7e4] px-4 py-2 text-sm font-bold text-navy">Effective Date: {lastUpdated}</p>
     </div>
   </section>
 
   <section class="bg-[#f8fafb] py-16">
     <div class="mx-auto grid w-[min(960px,calc(100%-40px))] gap-6">
+      <article class="rounded-3xl bg-white p-6 shadow-sm md:p-8">
+        <ul class="grid gap-3 text-slate-600">
+          {intro.map((item) => (
+            <li class="flex gap-3 leading-relaxed"><span>{item}</span></li>
+          ))}
+        </ul>
+      </article>
+
       {sections.map((section) => (
         <article class="rounded-3xl bg-white p-6 shadow-sm md:p-8">
           <h2 class="text-2xl font-extrabold tracking-[-.02em] text-navy">{section.title}</h2>
+          {section.intro && <p class="mt-5 font-bold leading-relaxed text-slate-600">{section.intro}</p>}
           <ul class="mt-5 grid gap-3 text-slate-600">
             {section.items.map((item) => (
-              <li class="flex gap-3 leading-relaxed"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-lime"></span><span>{item}</span></li>
+              <li class="flex gap-3 leading-relaxed"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-lime"></span><span set:html={item}></span></li>
             ))}
           </ul>
+          {section.outro && <p class="mt-5 font-bold leading-relaxed text-slate-600">{section.outro}</p>}
         </article>
       ))}
       
