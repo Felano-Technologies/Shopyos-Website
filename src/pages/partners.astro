@@ -1,0 +1,310 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const partnerTracks = [
+  {
+    title: 'Retailers & Multi-Branch Merchants',
+    badge: 'Storefront & Volume',
+    description: 'Digitize your entire inventory, connect multiple outlets, and reach shoppers seeking instant local delivery in your cities.',
+    features: ['Centralized catalog management', 'Multi-branch stock sync', 'Real-time local order dispatch'],
+    icon: '🏬',
+  },
+  {
+    title: 'Wholesale Suppliers & Distributors',
+    badge: 'B2B Distribution',
+    description: 'Supply verified retail shops and informal traders across Ghana with streamlined bulk order management and reliable payments.',
+    features: ['Direct access to retail merchants', 'Bulk volume purchasing flows', 'Predictable restocking channels'],
+    icon: '📦',
+  },
+  {
+    title: 'Logistics & Fleet Operators',
+    badge: 'Fulfillment & Fleet',
+    description: 'Plug your motorbikes, vans, or courier fleet directly into Shopyos automated routing engine to power on-demand deliveries.',
+    features: ['Automated delivery assignment', 'Live GPS route tracking', 'Prompt delivery settlement'],
+    icon: '🛵',
+  },
+];
+
+const benefits = [
+  {
+    title: 'Built for Ghanaian Trade',
+    description: 'Tailored for local commercial dynamics, mobile money workflows, and neighbourhood retail realities.',
+  },
+  {
+    title: 'Verified Trading Network',
+    description: 'Operate in a secure environment with KYC-verified sellers, transparent reviews, and dispute resolution.',
+  },
+  {
+    title: 'Real-Time Order & Route Tech',
+    description: 'Live order status updates, buyer notifications, and precise GPS coordinate tracking for frictionless handoffs.',
+  },
+  {
+    title: 'Dedicated Partner Support',
+    description: 'Hands-on onboarding, catalog digitization support, and dedicated operational account managers.',
+  },
+];
+---
+
+<BaseLayout
+  title="Partner With Us — Scale Your Trading Services | Shopyos"
+  description="Partner with Shopyos to scale up your trading services, reach verified local shoppers, and leverage our local commerce platform and fulfilment network across Ghana."
+>
+  <!-- Hero Section -->
+  <section class="page-hero relative overflow-hidden">
+    <div class="mx-auto w-[min(1120px,calc(100%-40px))]">
+      <div class="max-w-3xl">
+        <p class="eyebrow inline-flex items-center gap-2">
+          <span class="inline-block h-2 w-2 rounded-full bg-lime"></span>
+          B2B & Enterprise Partnerships
+        </p>
+        <h1 class="mt-4 text-5xl font-extrabold tracking-tight text-navy sm:text-6xl md:text-7xl">
+          Scale your trading services on Ghana's <span class="text-lime">local commerce</span> platform.
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-muted md:text-xl">
+          Whether you run retail chains, wholesale distribution, delivery fleets, or trade services, Shopyos gives you the digital storefronts, order routing, and localized fulfillment infrastructure to grow.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a class="btn" href="#partner-form">Partner with us now</a>
+          <a class="btn-dark" href="#opportunities">Explore partner tracks</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Proposition / Stats Highlight -->
+  <section class="border-y border-slate-100 bg-[#fbfcfb] py-14">
+    <div class="mx-auto w-[min(1120px,calc(100%-40px))]">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        {benefits.map((b) => (
+          <div class="rounded-xl border border-slate-200/80 bg-white p-6 shadow-xs">
+            <div class="h-2 w-10 rounded-full bg-lime"></div>
+            <h2 class="mt-4 text-lg font-bold text-navy">{b.title}</h2>
+            <p class="mt-2 text-sm leading-relaxed text-muted">{b.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Tracks / Opportunities -->
+  <section id="opportunities" class="py-20 md:py-28">
+    <div class="mx-auto w-[min(1120px,calc(100%-40px))]">
+      <div class="max-w-2xl">
+        <p class="eyebrow">Who we partner with</p>
+        <h2 class="mt-3 text-4xl font-extrabold tracking-tight text-navy md:text-5xl">
+          Designed for commercial operators at every stage.
+        </h2>
+        <p class="mt-4 text-lg text-muted">
+          Our platform integrates seamlessly with your business operations so you can scale trade volume, improve margins, and reach more customers.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+        {partnerTracks.map((track) => (
+          <article class="card flex flex-col justify-between transition-all hover:border-lime/60 hover:shadow-md">
+            <div>
+              <div class="flex items-center justify-between gap-4">
+                <span class="text-4xl">{track.icon}</span>
+                <span class="rounded-full bg-[#eff7e4] px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#4d7c0f]">
+                  {track.badge}
+                </span>
+              </div>
+              <h3 class="mt-5 text-2xl font-bold text-navy">{track.title}</h3>
+              <p class="mt-3 leading-relaxed text-muted">{track.description}</p>
+              
+              <ul class="mt-6 space-y-2 border-t border-slate-100 pt-5">
+                {track.features.map((feat) => (
+                  <li class="flex items-center gap-2.5 text-sm font-medium text-navy">
+                    <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-lime/20 text-xs font-bold text-[#4d7c0f]">✓</span>
+                    <span>{feat}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div class="mt-8 pt-4">
+              <a href="#partner-form" class="inline-flex items-center gap-1 text-sm font-bold text-navy transition hover:text-lime">
+                Partner with us in this track &rarr;
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Application Form Section -->
+  <section id="partner-form" class="bg-navy py-20 text-white md:py-28">
+    <div class="mx-auto grid w-[min(1120px,calc(100%-40px))] gap-12 lg:grid-cols-[1fr_1.1fr]">
+      <div>
+        <span class="inline-block rounded-full bg-lime px-3.5 py-1 text-xs font-extrabold uppercase tracking-[.15em] text-navy">
+          Let's Build Together
+        </span>
+        <h2 class="mt-5 text-4xl font-extrabold tracking-tight sm:text-5xl">
+          Ready to scale your trade services?
+        </h2>
+        <p class="mt-5 text-base leading-relaxed text-slate-300">
+          Tell us about your business, trading capacity, and partnership goals. Our commercial partnerships lead will review your submission and connect within 24 hours.
+        </p>
+
+        <div class="mt-10 space-y-6 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+          <div class="flex items-start gap-4">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-lime text-lg text-navy font-bold">1</span>
+            <div>
+              <h3 class="font-bold text-white">Submit your partnership details</h3>
+              <p class="text-sm text-slate-300">Fill in your business details and what services you want to scale.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-lime text-lg text-navy font-bold">2</span>
+            <div>
+              <h3 class="font-bold text-white">Strategy & integration session</h3>
+              <p class="text-sm text-slate-300">We outline custom commission structures and catalog ingestion.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-lime text-lg text-navy font-bold">3</span>
+            <div>
+              <h3 class="font-bold text-white">Go-live & trade scaling</h3>
+              <p class="text-sm text-slate-300">Launch on Shopyos with priority placement and dedicated account oversight.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-sm text-slate-300">
+          <p>Prefer direct conversation?</p>
+          <p class="mt-2 flex flex-wrap gap-4 font-semibold text-white">
+            <a href="tel:+233506514687" class="transition hover:text-lime">📞 +233 50 651 4687</a>
+            <a href="https://wa.me/233506514687" class="transition hover:text-lime">💬 WhatsApp</a>
+            <a href="mailto:support@shopyos.com" class="transition hover:text-lime">✉️ support@shopyos.com</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-white/10 bg-white p-8 text-navy shadow-2xl md:p-10">
+        <h3 class="text-2xl font-extrabold text-navy">Partner Application</h3>
+        <p class="mt-1 text-sm text-muted">Complete the form below to initiate your partnership with Shopyos.</p>
+
+        <form class="mt-8 grid gap-4" action="mailto:support@shopyos.com?subject=Shopyos%20Partner%20Application" method="post" enctype="text/plain">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-navy" for="business-name">
+              Business / Company Name *
+            </label>
+            <input
+              id="business-name"
+              name="business_name"
+              required
+              placeholder="e.g. Acme Wholesale Ltd"
+              class="mt-1.5 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm transition focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/10"
+            />
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-navy" for="contact-name">
+                Contact Person *
+              </label>
+              <input
+                id="contact-name"
+                name="contact_person"
+                required
+                placeholder="Full Name"
+                class="mt-1.5 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm transition focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/10"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-navy" for="contact-role">
+                Designation / Role
+              </label>
+              <input
+                id="contact-role"
+                name="role"
+                placeholder="e.g. Managing Director, Sales Lead"
+                class="mt-1.5 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm transition focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/10"
+              />
+            </div>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-navy" for="business-email">
+                Email Address *
+              </label>
+              <input
+                id="business-email"
+                type="email"
+                name="email"
+                required
+                placeholder="you@company.com"
+                class="mt-1.5 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm transition focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/10"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-navy" for="business-phone">
+                Phone / WhatsApp *
+              </label>
+              <input
+                id="business-phone"
+                name="phone"
+                required
+                placeholder="+233 XX XXX XXXX"
+                class="mt-1.5 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm transition focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/10"
+              />
+            </div>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-navy" for="partner-type">
+                Partnership Type *
+              </label>
+              <select
+                id="partner-type"
+                name="partnership_type"
+                class="mt-1.5 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm transition focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/10"
+              >
+                <option>Multi-Store Retail Merchant</option>
+                <option>Wholesale & Bulk Distributor</option>
+                <option>Delivery & Logistics Fleet</option>
+                <option>Brand Manufacturer</option>
+                <option>Financial & Technology Service</option>
+                <option>Other Commercial Partnership</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-navy" for="business-location">
+                City / Primary Region *
+              </label>
+              <input
+                id="business-location"
+                name="location"
+                required
+                placeholder="e.g. Kumasi, Greater Accra"
+                class="mt-1.5 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm transition focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/10"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-navy" for="partner-notes">
+              Briefly describe your trading services & scaling goals
+            </label>
+            <textarea
+              id="partner-notes"
+              name="scaling_goals"
+              rows="3"
+              placeholder="Tell us about your product range, current trade volume, fleet size, or specific collaboration interest..."
+              class="mt-1.5 w-full rounded-xl border border-slate-300 p-4 text-sm transition focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/10"
+            ></textarea>
+          </div>
+
+          <button class="btn mt-2 w-full py-4 text-base shadow-md transition hover:scale-[1.01]" type="submit">
+            Partner with us now
+          </button>
+          <p class="text-center text-xs text-muted">
+            Submitting opens your email app with your partner inquiry formatted for rapid dispatch.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

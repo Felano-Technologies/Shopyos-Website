@@ -8,11 +8,14 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/sitemap": "^3.7.4",
     "@tailwindcss/vite": "^4.3.3",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
-    "astro": "^7.2.3",
+    "astro": "^7.3.2",
     "tailwindcss": "^4.3.3"
+  },
+  "optionalDependencies": {
+    "@astrojs/compiler-binding-wasm32-wasi": "^0.2.3"
   }
 }
