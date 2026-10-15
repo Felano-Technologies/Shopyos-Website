@@ -182,7 +182,7 @@ Custom fonts configured:
 
 ## 📞 Support & Contact
 
-- **Email:** support@shopyos.com
+- **Email:** admin@shopyosgh.com
 - **Phone / WhatsApp:** +233 50 651 4687
 - **Location:** Kumasi, Ashanti Region, Ghana
 - **Organization:** Felano Technologies
